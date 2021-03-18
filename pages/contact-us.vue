@@ -3,7 +3,7 @@
     <BaseHeader :data="header" />
 
     <div
-      class="grid grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-xl min-h-lg h-full mx-auto"
+      class="grid grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
       <div>
         <iframe
@@ -19,7 +19,7 @@
         <img :src="image" alt="image" class="w-full" />
       </div> -->
       <div
-        class="flex flex-col gap-6 items-center text-primary justify-center max-w-screen-xl mx-auto"
+        class="flex flex-col gap-6 items-center text-primary justify-center max-w-screen-lg mx-auto"
       >
         <a
           href="https://goo.gl/maps/5LkGfVRQGzMf2A7y8"
@@ -45,9 +45,10 @@
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          <span class="text-xl">
-            #2307, Arenco Tower, Sheikh Zayed Road, Dubai, UAE</span
-          >
+          <div class="text-center">
+            <span class="text-xl"> #2307, Arenco Tower</span> <br />
+            <span class="text-xl"> Sheikh Zayed Road, Dubai, UAE</span>
+          </div>
         </a>
         <a href="mailto:info@wizzuae.ae" class="flex flex-col gap-2">
           <svg

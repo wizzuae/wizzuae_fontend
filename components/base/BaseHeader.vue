@@ -1,7 +1,7 @@
 <template>
   <div class="bg-neutral">
     <div
-      class="px-6 xl:px-0 text-primary py-12 max-w-screen-xl min-h-lg h-full mx-auto"
+      class="px-6 xl:px-0 text-primary py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
       <h1 class="text-3xl font-bold uppercase" v-if="data.title">
         {{ data.title }}

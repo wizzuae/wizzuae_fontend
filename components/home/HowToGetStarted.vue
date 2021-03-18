@@ -3,7 +3,7 @@
     <div
       class="border-t transform rotate-8 -mb-3 top-2 border-primary border-opacity-6 my-18 md:my-12"
     ></div>
-    <div class="grid max-w-screen-xl min-h-lg mx-auto">
+    <div class="grid max-w-screen-lg px-6 xl:px-0 min-h-lg mx-auto">
       <div class="lg:my-auto text-left">
         <div class="my-12 text-primary">
           <h1

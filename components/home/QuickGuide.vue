@@ -1,8 +1,8 @@
 <template>
-  <div
-    class="bg-gradient-to-r from-gray-900 via-primary to-blue-900 py-24 px-6"
-  >
-    <div class="grid md:grid-cols-2 max-w-screen-xl min-h-lg mx-auto">
+  <div class="bg-gradient-to-r from-gray-900 via-primary to-blue-900 py-24">
+    <div
+      class="grid md:grid-cols-2 max-w-screen-lg px-6 xl:px-0 min-h-lg mx-auto"
+    >
       <div class="lg:my-auto text-left">
         <div>
           <div class="text-secondary uppercase">

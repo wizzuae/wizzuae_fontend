@@ -5,7 +5,7 @@
         class="relative z-30 w-auto min-w-full min-h-full max-w-none video-top-layer"
       >
         <div
-          class="grid px-6 xl:px-0 lg:grid-cols-2 py-12 max-w-screen-xl min-h-lg h-full mx-auto"
+          class="grid px-6 xl:px-0 lg:grid-cols-2 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
         >
           <div class="lg:my-auto text-left">
             <div>

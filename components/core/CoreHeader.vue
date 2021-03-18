@@ -1,8 +1,8 @@
 <template>
   <div class="relative z-50">
-    <div class="bg-secondary max-w-screen h-8">
+    <div class="bg-secondary max-w-screen h-8 hidden md:block">
       <div
-        class="flex gap-6 items-center text-primary justify-end max-w-screen-xl mx-auto"
+        class="flex gap-6 items-center text-primary justify-end max-w-screen-lg px-6 xl:px-0 mx-auto"
       >
         <a href="https://goo.gl/maps/5LkGfVRQGzMf2A7y8" class="flex gap-2">
           <svg
@@ -63,9 +63,14 @@
       </div>
     </div>
     <div class="py-3 bg-primary max-w-screen">
-      <div class="max-w-screen-xl items-center flex justify-between mx-auto">
-        <Logo class="w-16 md:w-28" />
-        <DesktopNavBar />
+      <div
+        class="max-w-screen-lg px-6 xl:px-0 items-center flex justify-between mx-auto"
+      >
+        <Logo class="w-16 md:w-32" />
+        <DesktopNavBar class="hidden md:block" />
+        <!-- <div class="md:hidden">
+          <appointment></appointment>
+        </div> -->
       </div>
     </div>
   </div>

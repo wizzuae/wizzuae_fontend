@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex space-x-6">
     <NavButton v-for="(item, i) in navMenu" :key="i" :data="item" />
   </div>
 </template>
@@ -33,30 +33,6 @@ const ourServices = {
           title: 'Offshore Companies',
           slug: 'offshore-companies',
         },
-        {
-          title: 'Notarization',
-          slug: '#',
-        },
-        {
-          title: 'Local Sponsorship',
-          slug: '#',
-        },
-        {
-          title: 'Office Solutions',
-          slug: '#',
-        },
-        {
-          title: 'EJARI',
-          slug: '#',
-        },
-        {
-          title: 'Liquidation of Business',
-          slug: '#',
-        },
-        {
-          title: 'Bank Account Assistance',
-          slug: '#',
-        },
       ],
     },
     {
@@ -66,22 +42,23 @@ const ourServices = {
     {
       title: 'Registration Services',
       slug: 'registration-services',
+      subFolder: '/services/',
       sub: [
         {
           title: 'Business Protection & Trademark Registration Services',
-          slug: '#',
+          slug: 'business-protection-and-trademark-registration',
         },
         {
           title: 'Investor Right Protection',
-          slug: '#',
+          slug: 'investor-rights-and-protection',
         },
         {
           title: 'Certificate Attestation Embassy Services',
-          slug: '#',
+          slug: 'certificate-attestation-embassy-services',
         },
         {
           title: 'Business for Sale',
-          slug: '#',
+          slug: 'business-for-sale',
         },
       ],
     },
@@ -95,31 +72,11 @@ const ourServices = {
 const aboutUs = {
   title: 'About us',
   slug: '/about-us',
-  sub: [
-    {
-      title: 'Directors Desk',
-      slug: '#',
-    },
-    {
-      title: 'Our Team',
-      slug: '#',
-    },
-  ],
 }
 
 const portfolio = {
-  title: 'Portfolio',
-  slug: '/portfolio',
-  sub: [
-    {
-      title: 'Our Clients',
-      slug: '#',
-    },
-    {
-      title: 'Testimonials',
-      slug: '#',
-    },
-  ],
+  title: 'Our Clients',
+  slug: '/clients',
 }
 
 const careers = {

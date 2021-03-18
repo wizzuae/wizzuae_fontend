@@ -2,7 +2,7 @@
   <div class="group inline-block">
     <NuxtLink
       :to="data.slug"
-      class="outline-none focus:outline-none text-white px-3 py-1 rounded-sm flex items-center"
+      class="outline-none focus:outline-none text-xl text-secondary hover:text-white py-1 rounded-sm flex items-center"
     >
       <span class="pr-1 font-semibold flex-1">{{ data.title }}</span>
       <span v-if="data.sub">
@@ -19,12 +19,12 @@
     </NuxtLink>
     <ul
       v-if="data.sub"
-      class="bg-white border divide-y-4 rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32"
+      class="bg-primary border text-secondary divide-y divide-secondary rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32"
     >
       <li
         v-for="(item, i) in data.sub"
         :key="i"
-        class="rounded-sm relative px-3 py-1 hover:bg-gray-100"
+        class="rounded-sm relative px-3 py-1 hover:bg-blue-900"
       >
         <NuxtLink
           :to="data.subFolder ? data.subFolder + item.slug : item.slug"
@@ -45,7 +45,7 @@
         </NuxtLink>
         <ul
           v-if="item.sub"
-          class="bg-white border divide-y-4 rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left min-w-32"
+          class="bg-primary border divide-y rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left min-w-32"
         >
           <li
             v-for="(subItem, i) in item.sub"
@@ -73,7 +73,7 @@
             </NuxtLink>
             <ul
               v-if="subItem.sub"
-              class="bg-white border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left min-w-32"
+              class="bg-primary border rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left min-w-32"
             >
               <li
                 v-for="(deepItem, i) in subItem.sub"

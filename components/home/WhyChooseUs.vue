@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col flex-auto max-w-screen-xl min-h-lg mx-auto my-18 md:my-38 text-left py-24 px-6"
+    class="flex flex-col flex-auto max-w-screen-lg px-6 xl:px-0 min-h-lg mx-auto my-18 md:my-38 text-left py-24"
   >
     <!-- Header Section -->
     <div>
