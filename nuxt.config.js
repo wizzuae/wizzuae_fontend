@@ -58,7 +58,7 @@ export default {
     // Options
   },
   env: {
-    strapiBaseUri: process.env.API_URL || "http://localhost:1337"
+    strapiBaseUri: "https://www.wizzuae.ae/"
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
