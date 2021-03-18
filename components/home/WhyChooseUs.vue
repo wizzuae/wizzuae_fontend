@@ -42,16 +42,16 @@
 
 <script>
 // const reasons = [
-//   { title: "Accurate", icon: "carbon-center-circle" },
-//   { title: "Transparency", icon: "carbon-data-view " },
-//   { title: "On Time", icon: "carbon-time " },
+//   { title: "Accuracy", icon: "carbon-center-circle" },
+//   { title: "Transparency", icon: "carbon-data-view" },
+//   { title: "On Time", icon: "carbon-time" },
 //   { title: "Efficiency", icon: "carbon-meter" },
 //   { title: "Authenticity", icon: "carbon-badge" },
-//   { title: "Accountability ", icon: "carbon-scales " },
+//   { title: "Accountability ", icon: "carbon-scales" },
 // ];
 
 const items = [
-  { title: 'Accurate', icon: 'why-choose-us/Accuracy.png' },
+  { title: 'Accuracy', icon: 'why-choose-us/Accuracy.png' },
   { title: 'Authenticity', icon: 'why-choose-us/authenticity.png' },
   { title: 'Accountability', icon: 'why-choose-us/accountability.png' },
   { title: 'Efficiency', icon: 'why-choose-us/efficiency.jpg' },

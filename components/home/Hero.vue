@@ -14,9 +14,7 @@
               >
                 {{ data.title }}
               </h1>
-              <p
-                class="tracking-widest text-cool-gray-800 opacity-80 dark:(text-primary opacity-50)"
-              >
+              <p class="tracking-widest text-cool-gray-800 opacity-90 text-xl">
                 {{ data.description }}
               </p>
             </div>
