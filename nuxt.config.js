@@ -38,27 +38,50 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    'nuxt-windicss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa', '@nuxtjs/strapi', '@nuxtjs/markdownit'
+    '@nuxtjs/pwa', '@nuxtjs/strapi', '@nuxtjs/markdownit', '@nuxtjs/apollo'
   ],
   // This is for displaying rich text content in the frontend.
   markdownit: {
     preset: 'default',
     linkify: true,
     breaks: true,
-    injected: true
+    injected: true,
+    html: true
   },
 
   strapi: {
     // Options
   },
+  apollo: {
+    // Tutorial Title: Leveraging the Power of GraphQL and NuxtJS
+    // Tutorial Link: https://labs.thisdot.co/blog/leveraging-the-power-of-graphql-and-nuxtjs
+    tokenName: "nuxt-apollo", // specify token name
+    cookieAttributes: {
+      expires: 7 // optional, default: 7 (days)
+    },
+    defaultOptions: {
+      $query: {
+        fetchPolicy: "network-only",
+        errorPolicy: "all"
+      }
+    },
+    watchLoading: "@/apollo/loadingHandler.js",
+    errorHandler: "@/apollo/errorHandler.js",
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:8055/graphql',
+      }
+    }
+  },
   env: {
-    strapiBaseUri: "https://www.wizzuae.ae/"
+    strapiBaseUri: "https://www.wizzuae.ae/",
+    ASSET_URL: process.env.ASSET_URL
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

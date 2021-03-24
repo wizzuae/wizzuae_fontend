@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gradient-to-r from-gray-900 via-primary to-blue-900 py-24">
     <div
-      class="grid md:grid-cols-2 gap-6 max-w-screen-lg px-6 xl:px-0 min-h-lg mx-auto"
+      class="grid md:grid-cols-2 gap-6 max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto"
     >
       <div class="lg:my-auto text-left">
         <div>
@@ -63,20 +63,20 @@ export default {
     return {
       services: [
         {
-          title: 'Business Set Up Services',
-          slug: '/service_categories/business-setup',
+          title: 'Business Set Up',
+          slug: '/services/business-setup',
         },
         {
           title: 'PRO & Visa Services',
-          slug: '/service_categories/pro-and-visa-services',
+          slug: '/services/pro-and-visa-services',
         },
         {
           title: 'Registration Services',
-          slug: '/service_categories/registration-services',
+          slug: '/services/registration-services',
         },
         {
           title: 'Financial Services',
-          slug: '/service_categories/financial-services',
+          slug: '/services/financial-services',
         },
       ],
     }

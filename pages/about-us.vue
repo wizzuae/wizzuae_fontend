@@ -22,13 +22,12 @@ export default {
     const data = await $strapi.find('about-us')
     const content = $md.render(data.content)
     const api_url = process.env.strapiBaseUri
-    const image = api_url + data.image.url
+
     // Hardcoded Header for About us
     const header = { title: 'About us', description: null }
     return {
       header,
       content,
-      image,
     }
   },
 }

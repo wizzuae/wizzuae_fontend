@@ -1,0 +1,79 @@
+[
+    {
+        "title": "Home",
+        "slug": "/"
+    },
+    {
+        "title": "Services",
+        "slug": "#",
+        "subFolder": "/services/",
+        "sub": [
+            {
+                "title": "Business Setup",
+                "slug": "business-setup",
+                "subFolder": "/services/",
+                "sub": [
+                    {
+                        "title": "Mainland Companies",
+                        "slug": "mainland-companies"
+                    },
+                    {
+                        "title": "Free Zone Companies",
+                        "slug": "free-zone-companies"
+                    },
+                    {
+                        "title": "Offshore Companies",
+                        "slug": "offshore-companies"
+                    }
+                ]
+            },
+            {
+                "title": "PRO & VISA Services",
+                "slug": "pro-and-visa-services"
+            },
+            {
+                "title": "Registration Services",
+                "slug": "registration-services",
+                "subFolder": "/services/",
+                "sub": [
+                    {
+                        "title": "Business Protection & Trademark Registration Services",
+                        "slug": "business-protection-and-trademark-registration"
+                    },
+                    {
+                        "title": "Investor Right Protection",
+                        "slug": "investor-rights-and-protection"
+                    },
+                    {
+                        "title": "Certificate Attestation Embassy Services",
+                        "slug": "certificate-attestation-embassy-services"
+                    },
+                    {
+                        "title": "Business for Sale",
+                        "slug": "business-for-sale"
+                    }
+                ]
+            },
+            {
+                "title": "Financial Services",
+                "slug": "financial-services"
+            }
+        ]
+    },
+    {
+        "title": "About us",
+        "slug": "/about-us"
+    },
+    {
+        "title": "Our Clients",
+        "slug": "/clients"
+    },
+    {
+        "title": "Careers",
+        "slug": "/careers"
+    },
+    {
+        "title": "Contact us",
+        "slug": "/contact-us"
+    }
+]

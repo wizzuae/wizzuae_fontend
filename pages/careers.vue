@@ -2,14 +2,14 @@
   <div>
     <BaseHeader :data="header" />
     <div
-      class="grid grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
+      class="grid md:grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
       <div v-if="image">
         <img :src="image" alt="image" class="w-full" />
       </div>
       <div>
         <div
-          class="prose prose-xl text-gray-600 text-justify"
+          class="prose md:prose-xl w-full text-gray-600 text-justify"
           v-if="content"
           v-html="content"
         ></div>

@@ -1,0 +1,268 @@
+{
+    "hero": {
+        "title": "YOUR BUSINESS BEGINS HERE !",
+        "description": "Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement. We also provide hand-in lawsuit protection so that there is no halt in your dreams",
+        "image": null,
+        "video": {
+            "id": "99f7daf0-8b06-4a2e-b404-a2d3cc207133"
+        },
+        "button": {
+            "title": "About us",
+            "url": "/about-us"
+        }
+    },
+    "quick": {
+        "title": "A QUICK GUIDE",
+        "content": [
+            {
+                "id": "3",
+                "item": {
+                    "title": "A QUICK GUIDE",
+                    "description": "THROUGH OUR SERVICES",
+                    "image": null,
+                    "video": null
+                }
+            },
+            {
+                "id": "8",
+                "item": {
+                    "links": [
+                        {
+                            "links_id": {
+                                "title": "Business Set Up",
+                                "url": "/service_categories/business-setup"
+                            }
+                        },
+                        {
+                            "links_id": {
+                                "title": "PRO & Visa Services",
+                                "url": "/service_categories/pro-and-visa-services"
+                            }
+                        },
+                        {
+                            "links_id": {
+                                "title": "Registration Services",
+                                "url": "https://www.wizzuae.ae/service_categories/registration-services"
+                            }
+                        },
+                        {
+                            "links_id": {
+                                "title": "Financial Services",
+                                "url": "/service_categories/financial-services"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "why_choose_us": {
+        "title": "WHY CHOOSE US ?",
+        "icons": [
+            {
+                "icons_id": {
+                    "id": "1",
+                    "title": "Accuracy",
+                    "image": {
+                        "id": "c4265c7a-cfd4-4370-80cd-f6daa9d309a7"
+                    }
+                }
+            },
+            {
+                "icons_id": {
+                    "id": "2",
+                    "title": "AUTHENTICITY",
+                    "image": {
+                        "id": "76d5cf1c-65e5-474e-bab2-2f4878d06264"
+                    }
+                }
+            },
+            {
+                "icons_id": {
+                    "id": "3",
+                    "title": "ACCOUNTABILITY",
+                    "image": {
+                        "id": "e7d345df-3cb5-4408-950c-3fab6e9b2f62"
+                    }
+                }
+            },
+            {
+                "icons_id": {
+                    "id": "4",
+                    "title": "EFFICIENCY",
+                    "image": {
+                        "id": "b0c46735-65ab-4bf2-abb2-3ee4dcfd9dd5"
+                    }
+                }
+            },
+            {
+                "icons_id": {
+                    "id": "5",
+                    "title": "EFFECTIVENESS",
+                    "image": {
+                        "id": "30a3b775-7906-470e-af9d-7c2effce0239"
+                    }
+                }
+            },
+            {
+                "icons_id": {
+                    "id": "6",
+                    "title": "TRANSPARENCY",
+                    "image": {
+                        "id": "19b238d1-91af-4f48-a61f-c62a7d40dd36"
+                    }
+                }
+            }
+        ]
+    },
+    "govt_agencies": {
+        "title": "WE WORK CLOSELY WITH ALL GOVERNMENT AGENCIES",
+        "brands": [
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "36ad676e-17fa-4e78-a834-76f0dc81a438"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "6600a400-507e-4460-97cf-c322607bff4f"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "2276898e-14d3-464a-a661-d08612bd4161"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "d7b1c23f-5df0-4688-8097-4de5d6553cf3"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "36ad676e-17fa-4e78-a834-76f0dc81a438"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "c7fcad13-3a2a-4e12-b8e8-e3bbec708f5d"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "036e20bc-77ff-490d-b374-880d0e5bfafb"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "7dafe513-68b4-4c54-83e2-f5986a5d4a61"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "bc0503a6-1f17-40f0-a3e8-f108b38fb1c7"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "c7fc77dd-9d6e-4528-b549-c378d49ab0d8"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "a66b57ef-2952-482a-a3c8-73b12fe710f2"
+                    }
+                }
+            },
+            {
+                "brands_id": {
+                    "logo": {
+                        "id": "1fafc2f4-4995-4a68-955f-3c001c78ed74"
+                    }
+                }
+            }
+        ]
+    },
+    "how_get_started": {
+        "header": {
+            "title": "HOW TO GET STARTED ?",
+            "description": "Just follow any of these steps to start a business in UAE, we are ready to help you with the rest",
+            "image": null,
+            "video": null
+        },
+        "cards": [
+            {
+                "cards_id": {
+                    "title": "Send us a quick enquiry",
+                    "description": "Share your details with us for further discussion!",
+                    "icon": {
+                        "id": "7",
+                        "title": "Send an enquiry",
+                        "image": {
+                            "id": "0fcfa49c-fedd-435b-b7ec-405d72baa88f"
+                        }
+                    },
+                    "button": {
+                        "title": "Quick Enquiry",
+                        "url": "/contact-us"
+                    }
+                }
+            },
+            {
+                "cards_id": {
+                    "title": "Book an Appointment",
+                    "description": "Meet us and meet your requirements!",
+                    "icon": {
+                        "id": "9",
+                        "title": "Appointment",
+                        "image": {
+                            "id": "fa43ae1f-194a-4e4c-a840-75aa98c410a3"
+                        }
+                    },
+                    "button": {
+                        "title": "Book Now",
+                        "url": "/free-appointment"
+                    }
+                }
+            },
+            {
+                "cards_id": {
+                    "title": "Speak to our consultant",
+                    "description": "Let us understand your requisites better!",
+                    "icon": {
+                        "id": "8",
+                        "title": "Speak to our consultant",
+                        "image": {
+                            "id": "23b65c3a-f8f6-4c4f-8e15-3fb58e75a731"
+                        }
+                    },
+                    "button": {
+                        "title": "Call Now",
+                        "url": "tel:+971 4 261 0888"
+                    }
+                }
+            }
+        ]
+    }
+}

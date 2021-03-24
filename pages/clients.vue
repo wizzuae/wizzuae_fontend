@@ -25,11 +25,7 @@
 
 <script>
 export default {
-  async asyncData({ $strapi, $md }) {
-    const data = await $strapi.find('about-us')
-    const content = $md.render(data.content)
-    const api_url = process.env.strapiBaseUri
-    const image = api_url + data.image.url
+  async asyncData() {
     // Hardcoded Header for About us
     const header = { title: 'Clients', description: null }
     const clientsLogo = [
@@ -44,8 +40,6 @@ export default {
     ]
     return {
       header,
-      content,
-      image,
       clientsLogo,
     }
   },

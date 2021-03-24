@@ -9,17 +9,18 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/strapi": "^0.3.0",
-    "@tailwindcss/typography": "^0.4.0",
     "core-js": "^3.8.3",
+    "graphql-tag": "^2.11.0",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.4.2",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "nuxt-windicss": "^0.4.4",
     "prettier": "^2.2.1"
   }
 }

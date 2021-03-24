@@ -1,30 +1,17 @@
-// const defaultTheme = require('tailwindcss/defaultTheme')
 
-export default {
+const colors = require('windicss/colors')
+const typography = require('windicss/plugin/typography')
+
+module.exports = {
+    darkMode: 'class',
+    plugins: [typography],
     theme: {
         extend: {
             colors: {
                 primary: "#164F63",
                 secondary: "#A3C0BA",
                 neutral: "#FAFAFA"
-            }
+            },
         }
-    },
-    variants: {},
-    plugins: [
-        require('@tailwindcss/typography'),
-    ],
-    purge: {
-        enabled: process.env.NODE_ENV === 'production',
-        content: [
-            'components/**/*.vue',
-            'layouts/**/*.vue',
-            'pages/**/*.vue',
-            'plugins/**/*.js',
-            'nuxt.config.js',
-            // TypeScript
-            // 'plugins/**/*.ts',
-            // 'nuxt.config.ts'
-        ]
     }
 }

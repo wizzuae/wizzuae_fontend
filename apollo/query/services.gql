@@ -1,0 +1,21 @@
+{
+  items {
+    services{
+      title
+      content
+      category {
+        categories_id {
+          slug
+          title
+        }
+      }
+      slug
+      image{
+        id
+        s3_url
+        filename_disk
+      }
+      
+    }
+  }
+}

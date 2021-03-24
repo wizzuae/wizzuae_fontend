@@ -1,0 +1,21 @@
+query Service ($slug: String) {
+	items {
+		services(filter: { slug:  { _eq: $slug } }) {
+			id
+			title
+      image{
+        id
+        s3_url
+        filename_disk
+      }
+      content
+      category{
+        categories_id {
+          title
+          slug
+        }
+      }
+			
+		}
+	}
+}

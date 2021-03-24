@@ -1,0 +1,91 @@
+{
+  items {
+    home {
+      id
+      components {
+        item {
+          ... on sections {
+            title
+            content {
+              id
+              item {
+                ... on header {
+                  title
+                  description
+                  image {
+                    id
+                    s3_url
+                    filename_disk
+                  }
+                  video {
+                    id
+                    s3_url
+                    filename_disk
+                  }
+                }
+                ... on links {
+                  title
+                  url
+                }
+                ... on multi_brands {
+                  brands {
+                    brands_id {
+                      logo {
+                        id
+                        s3_url
+                        filename_disk
+                      }
+                    }
+                  }
+                }
+                ... on multi_links {
+                  links {
+                    links_id {
+                      title
+                      url
+                    }
+                  }
+                }
+                
+                ... on multi_cards {
+                  cards {
+                    cards_id {
+                      title
+                      description
+                      icon {
+                        id
+                        title
+                        image {
+                          id
+                          s3_url
+                          filename_disk
+                        }
+                      }
+                      button {
+                        title
+                        url
+                      }
+                    }
+                  }
+                }
+                ... on multi_icons {
+                  icons {
+                    icons_id {
+                      id
+                      title
+                      image {
+                        s3_url
+                        filename_disk
+                        id
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

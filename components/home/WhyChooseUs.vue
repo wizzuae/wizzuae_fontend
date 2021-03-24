@@ -1,13 +1,13 @@
 <template>
   <div
-    class="flex flex-col flex-auto max-w-screen-lg px-6 xl:px-0 min-h-lg mx-auto my-18 md:my-38 text-left py-24"
+    class="flex flex-col flex-auto max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto my-18 md:my-38 text-center"
   >
     <!-- Header Section -->
-    <div>
+    <div class="">
       <h1
         class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 uppercase text-primary"
       >
-        Why choose us ?
+        {{ data.title }}
       </h1>
       <!-- <p
         class="tracking-widest text-cool-gray-800 opacity-80 dark:(text-primary opacity-50)"
@@ -15,12 +15,13 @@
         We are highly qualified and experienced people with great vision.
       </p> -->
     </div>
+    <hr class="my-12 md:w-100 mx-auto" />
     <!-- Body Section -->
     <div class="mt-3 tracking-widest text-primary">
       <div class="grid grid-cols-2 md:grid-cols-3 gap-5 items-center">
         <!-- Reason -->
         <div
-          v-for="(item, i) in data"
+          v-for="(item, i) in data.icons"
           :key="i"
           class="flex flex-col p-6 justify-center items-center"
         >
@@ -30,9 +31,15 @@
           <div
             class="md:w-30 md:h-30 xl:w-40 xl:h-40 rounded-full border-8 flex items-center"
           >
-            <img class="rounded-full" :src="item.icon" alt="" />
+            <img
+              class="rounded-full"
+              :src="assetUrl + item.icons_id.image.id"
+              alt=""
+            />
           </div>
-          <div class="md:text-3xl mt-6 uppercase">{{ item.title }}</div>
+          <div class="md:text-3xl mt-6 uppercase">
+            {{ item.icons_id.title }}
+          </div>
         </div>
       </div>
     </div>
@@ -50,18 +57,15 @@
 //   { title: "Accountability ", icon: "carbon-scales" },
 // ];
 
-const items = [
-  { title: 'Accuracy', icon: 'why-choose-us/Accuracy.png' },
-  { title: 'Authenticity', icon: 'why-choose-us/authenticity.png' },
-  { title: 'Accountability', icon: 'why-choose-us/accountability.png' },
-  { title: 'Efficiency', icon: 'why-choose-us/efficiency.jpg' },
-  { title: 'Effectiveness', icon: 'why-choose-us/Effectiveness.png' },
-  { title: 'Transparency', icon: 'why-choose-us/Transperancy.png' },
-]
 export default {
+  props: {
+    data: {
+      type: Object,
+    },
+  },
   data() {
     return {
-      data: items,
+      assetUrl: process.env.ASSET_URL,
     }
   },
 }

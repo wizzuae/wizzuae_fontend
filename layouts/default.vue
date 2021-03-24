@@ -1,10 +1,20 @@
 <template>
   <div>
     <CoreHeader />
-    <Nuxt />
+    <div>
+      <Nuxt />
+      <NavbarMobile class="sticky text-center bottom-6" />
+    </div>
     <CoreFooter />
   </div>
 </template>
+
+<script>
+import NavbarMobile from '~/components/core/NavbarMobile.vue'
+export default {
+  components: { NavbarMobile },
+}
+</script>
 
 <style>
 html {

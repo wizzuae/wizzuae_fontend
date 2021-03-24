@@ -3,21 +3,18 @@
     <BaseHeader :data="header" />
 
     <div
-      class="grid grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
+      class="grid md:grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
-      <div>
+      <div class="order-last md:order-first">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.3077807240106!2d55.156192514858304!3d25.091440683945446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b5d6fc8634b%3A0x9305041eb9c02e13!2sArenco%20Tower!5e0!3m2!1sen!2sin!4v1615887096865!5m2!1sen!2sin"
-          width="600"
-          height="450"
+          width="100%"
+          height="100%"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
         ></iframe>
       </div>
-      <!-- <div v-if="image" class="lg:order-last">
-        <img :src="image" alt="image" class="w-full" />
-      </div> -->
       <div
         class="flex flex-col gap-6 items-center text-primary justify-center max-w-screen-lg mx-auto"
       >
@@ -88,11 +85,6 @@
         </a>
         <appointment></appointment>
       </div>
-      <div
-        class="prose prose-xl text-gray-600 text-justify"
-        v-if="content"
-        v-html="content"
-      ></div>
     </div>
   </div>
 </template>
