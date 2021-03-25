@@ -10,16 +10,16 @@
       });`" -->
     <div class="grid md:grid-cols-2">
       <div
-        class="flex px-6 min-h-20 xl:px-0 text-left text-neutral max-w-screen-lg mx-auto"
+        class="flex px-6 min-h-20 xl:px-0 text-left text-neutral max-w-screen-lg md:mx-auto"
       >
         <h1 class="md:text-3xl font-bold my-auto uppercase" v-if="data.title">
           {{ data.title }}
         </h1>
         <p v-if="data.description">{{ data.description }}</p>
       </div>
-      <div>
+      <div class="flex justify-end">
         <img
-          class="shadow-xl"
+          class="shadow-xl aspect-h-4"
           :src="data.image.s3_url + data.image.filename_disk"
           alt="header image"
         />
