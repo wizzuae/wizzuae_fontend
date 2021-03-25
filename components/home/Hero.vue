@@ -22,7 +22,7 @@
                 </p>
               </div>
               <div v-if="items.collection === 'links'" class="mt-6">
-                <router-link :to="items.item.title">
+                <router-link :to="items.item.url">
                   <button
                     class="rounded text-primary border-opacity-10 shadow-2xl hover:text-secondary hover:bg-primary py-3 px-3 border border-primary"
                   >
