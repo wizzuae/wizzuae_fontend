@@ -28,14 +28,18 @@
       <div
         class="flex flex-col text-xl text-center divide-y-1 px-3 align-middle divide-secondary"
       >
-        <button class="py-2" @click="$router.go('/')">Home</button>
+        <button class="py-2" @click="$router.replace('/')">Home</button>
         <button class="py-2" @click="setServices">Services</button>
-        <button class="py-2" @click="$router.go('/about-us')">About us</button>
-        <button class="py-2" @click="$router.go('/clients')">
+        <button class="py-2" @click="$router.replace('/about-us')">
+          About us
+        </button>
+        <button class="py-2" @click="$router.replace('/clients')">
           Our Clients
         </button>
-        <button class="py-2" @click="$router.go('/careers')">Careers</button>
-        <button class="py-2" @click="$router.go('/contact-us')">
+        <button class="py-2" @click="$router.replace('/careers')">
+          Careers
+        </button>
+        <button class="py-2" @click="$router.replace('/contact-us')">
           Contact us
         </button>
       </div>
