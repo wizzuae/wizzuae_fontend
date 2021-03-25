@@ -1,6 +1,6 @@
 <template>
   <div
-    class="prose prose-xl my-12 mx-auto text-gray-600 text-justify"
+    class="prose md:prose-xl my-12 content mx-auto text-gray-600"
     v-if="data"
     v-html="$md.render(data)"
   ></div>
@@ -15,3 +15,5 @@ export default {
   },
 }
 </script>
+<style  scoped>
+</style>

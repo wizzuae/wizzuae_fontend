@@ -5,7 +5,7 @@
       class="bg-primary rounded-md text-secondary py-2 w-50 m-auto"
     >
       <nav
-        class="flex capitalize flex-col text-xl text-center divide-y-1 px-3 align-middle divide-secondary"
+        class="flex capitalize flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
       >
         <router-link class="icon-btn py-2" to="/services/business-setup">
           Business Setup
@@ -26,7 +26,7 @@
       class="bg-primary rounded-md text-secondary py-2 font-bold w-50 m-auto"
     >
       <div
-        class="flex flex-col text-xl text-center divide-y-1 px-3 align-middle divide-secondary"
+        class="flex flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
       >
         <button class="py-2" @click="$router.replace('/')">Home</button>
         <button class="py-2" @click="setServices">Services</button>
