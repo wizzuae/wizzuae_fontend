@@ -10,16 +10,16 @@
       });`" -->
     <div class="grid md:grid-cols-2">
       <div
-        class="flex flex-col px-6 min-h-20 xl:px-0 text-left text-neutral max-w-screen-lg md:mx-auto"
+        class="flex flex-col px-6 min-h-30 xl:px-0 text-left text-neutral max-w-screen-lg md:mx-auto"
       >
         <div class="my-auto">
           <h1
-            class="md:text-3xl lg:text-4xl font-bold uppercase"
+            class="text-2xl md:text-3xl lg:text-4xl font-bold uppercase"
             v-if="data.title"
           >
             {{ data.title }}
           </h1>
-          <p class="lg:text-xl mt-3" v-if="data.description">
+          <p class="text-md lg:text-xl mt-1 md:mt-3" v-if="data.description">
             {{ data.description }}
           </p>
         </div>
