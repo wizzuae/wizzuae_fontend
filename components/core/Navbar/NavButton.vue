@@ -26,8 +26,8 @@
         :key="i"
         class="rounded-sm relative px-3 py-1 hover:bg-blue-900"
       >
-        <NuxtLink
-          :to="data.subFolder ? data.subFolder + item.slug : item.slug"
+        <a
+          :href="data.subFolder ? data.subFolder + item.slug : item.slug"
           class="w-full text-left flex items-center outline-none focus:outline-none"
         >
           <span class="pr-1 flex-1">{{ item.title }}</span>
@@ -42,7 +42,7 @@
               />
             </svg>
           </span>
-        </NuxtLink>
+        </a>
         <ul
           v-if="item.sub"
           class="bg-primary border divide-y rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out origin-top-left min-w-32"

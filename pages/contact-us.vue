@@ -1,53 +1,39 @@
 <template>
   <div>
-    <BaseHeader :data="header" />
+    <BaseHeader :data="data.header" />
 
     <div
       class="grid md:grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
-      <div class="order-last md:order-first">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.3077807240106!2d55.156192514858304!3d25.091440683945446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b5d6fc8634b%3A0x9305041eb9c02e13!2sArenco%20Tower!5e0!3m2!1sen!2sin!4v1615887096865!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
+      <div class="order-last md:order-first" v-html="data.map"></div>
       <div
         class="flex flex-col gap-6 items-center text-primary justify-center max-w-screen-lg mx-auto"
       >
-        <a
-          href="https://goo.gl/maps/5LkGfVRQGzMf2A7y8"
-          class="flex flex-col gap-2"
+        <svg
+          class="h-16"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
-          <svg
-            class="h-16"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-          <div class="text-center">
-            <span class="text-xl"> #2307, Arenco Tower</span> <br />
-            <span class="text-xl"> Sheikh Zayed Road, Dubai, UAE</span>
-          </div>
-        </a>
-        <a href="mailto:info@wizzuae.ae" class="flex flex-col gap-2">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+        <div class="text-center">
+          <span class="text-xl" v-html="$md.render(data.address)"> </span>
+        </div>
+
+        <a :href="`mailto:${data.email}`" class="flex flex-col gap-2">
           <svg
             class="h-16"
             xmlns="http://www.w3.org/2000/svg"
@@ -60,12 +46,12 @@
               clip-rule="evenodd"
             />
           </svg>
-          <span class="text-xl">info@wizzuae.ae</span>
+          <span class="text-xl">{{ data.email }}</span>
         </a>
         <a
           class="flex flex-col gap-2"
           type="button"
-          href="tel:+971 58 555 0070"
+          :href="`tel:${data.phone}`"
         >
           <svg
             class="h-16"
@@ -81,9 +67,8 @@
               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
             />
           </svg>
-          <span class="text-xl">+971 58 555 0070</span>
+          <span class="text-xl">{{ data.phone }}</span>
         </a>
-        <appointment></appointment>
       </div>
     </div>
   </div>
@@ -91,18 +76,19 @@
 
 <script>
 export default {
-  async asyncData({ $strapi, $md }) {
-    // const data = await $strapi.find('contact-us')
-    // const content = $md.render(data.content)
-    const api_url = process.env.strapiBaseUri
-    // const image = api_url + data.image.url
-    // Hardcoded Header for About us
-    const header = { title: 'Contact us', description: null }
-    return {
-      header,
-      //   content,
-      //   image,
-    }
+  async asyncData({ $axios }) {
+    let data = await $axios.$get('/contact_us/', {
+      params: {
+        fields: [
+          '*.*',
+          'header.image.id',
+          'header.image.filename_disk',
+          'header.image.s3_url',
+        ],
+      },
+    })
+    data.data
+    return data
   },
 }
 </script>

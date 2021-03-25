@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import navMenu from '~/apollo/query/menu.json'
+import navMenu from './menu.json'
 import NavButton from './Navbar/NavButton.vue'
 
 export default {

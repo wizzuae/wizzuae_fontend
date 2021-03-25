@@ -1,71 +1,85 @@
 <template>
-  <!-- v-if="!$apollo.queries.home.loading" -->
   <div>
-    <Hero :data="home.hero" />
-    <quick-guide :data="home.quick_guide" />
-    <why-choose-us :data="home.why_choose_us" />
-    <Government :data="home.govt_agencies" />
-    <how-to-get-started :data="home.how_get_started"></how-to-get-started>
+    <div v-for="({ item }, i) in data" :key="i">
+      <Hero v-if="item.slug === 'hero'" :data="item.content" />
+      <quick-guide v-if="item.slug === 'quick-guide'" :data="item.content" />
+      <why-choose-us
+        v-if="item.slug === 'why-choose-us'"
+        :data="item.content"
+      />
+      <Government
+        v-if="item.slug === 'government-agencies'"
+        :data="item.content"
+      />
+      <how-to-get-started
+        v-if="item.slug === 'how-to-get-started'"
+        :data="item.content"
+      ></how-to-get-started>
+
+      <join-our-team
+        v-if="item.slug === 'join-our-team'"
+        :data="item.content"
+      ></join-our-team>
+    </div>
   </div>
 </template>
 
 <script>
-import home from '~/apollo/query/home.gql'
-import homeData from '~/apollo/query/home.json'
 import Hero from '~/components/home/Hero.vue'
 import Government from '~/components/home/Government.vue'
 import QuickGuide from '~/components/home/QuickGuide.vue'
 import WhyChooseUs from '~/components/home/WhyChooseUs.vue'
 import HowToGetStarted from '~/components/home/HowToGetStarted.vue'
+import JoinOurTeam from '~/components/home/JoinOurTeam.vue'
 export default {
-  components: { Hero, Government, QuickGuide, WhyChooseUs, HowToGetStarted },
-  name: 'home',
-  data() {
-    return {
-      home: homeData,
-    }
+  components: {
+    Hero,
+    Government,
+    QuickGuide,
+    WhyChooseUs,
+    HowToGetStarted,
+    JoinOurTeam,
   },
-  // async asyncData({ $strapi }) {
-  // const { hero } = await $strapi.find('homepage')
-  // return {
-  // hero,
-  // }
-  // },
-  // apollo: {
-  //   home: {
-  //     prefetch: true,
-  //     query: home,
-  // variables() {
-  //   return { id: 1 }
-  // },
-  //     update(data) {
-  //       const {
-  //         // Hero
-  //         hero_title,
-  //         hero_description,
-  //         hero_button,
-  //         // Quick Guide
-  //         quick_guide_title,
-  //         quick_guide_buttons,
-  //         // Why choose
-  //         why_choose_us_icons,
-  //       } = data.items.home
-  //       const hero = {
-  //         title: hero_title,
-  //         description: hero_description,
-  //         button: hero_button,
-  //       }
-  //       const quick_guide = {
-  //         title: quick_guide_title,
-  //         button: quick_guide_buttons,
-  //       }
-  //       const why_choose_us = {
-  //         icons: why_choose_us_icons,
-  //       }
-  //       return { hero, quick_guide, why_choose_us }
-  //     },
-  //   },
-  // },
+  name: 'home',
+  async asyncData({ $axios }) {
+    let data = await $axios.$get('/home', {
+      params: {
+        fields: [
+          'components.item:sections.slug',
+          'components.item:sections.content.collection',
+          'components.item:sections.content.item:header.title',
+          'components.item:sections.content.item:header.description',
+          'components.item:sections.content.item:header.image.id',
+          'components.item:sections.content.item:header.image.s3_url',
+          'components.item:sections.content.item:header.image.filename_disk',
+          'components.item:sections.content.item:header.video.id',
+          'components.item:sections.content.item:header.video.s3_url',
+          'components.item:sections.content.item:header.video.filename_disk',
+          'components.item:sections.content.item:links.title',
+          'components.item:sections.content.item:links.url',
+          'components.item:sections.content.item:multi_brands.brands.brands_id.logo.id',
+          'components.item:sections.content.item:multi_brands.brands.brands_id.logo.s3_url',
+          'components.item:sections.content.item:multi_brands.brands.brands_id.logo.filename_disk',
+          'components.item:sections.content.item:multi_links.links.links_id.title',
+          'components.item:sections.content.item:multi_links.links.links_id.url',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.title',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.description',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.icon.title',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.icon.image.id',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.icon.image.s3_url',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.icon.image.filename_disk',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.button.title',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.button.url',
+          'components.item:sections.content.item:multi_icons.icons.icons_id.title',
+          'components.item:sections.content.item:multi_icons.icons.icons_id.image.id',
+          'components.item:sections.content.item:multi_icons.icons.icons_id.image.s3_url',
+          'components.item:sections.content.item:multi_icons.icons.icons_id.image.filename_disk',
+        ],
+      },
+    })
+    data = data.data.components
+    return { data }
+  },
 }
 </script>
 

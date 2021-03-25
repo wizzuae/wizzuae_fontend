@@ -1,18 +1,14 @@
 <template>
   <div>
-    <BaseHeader :data="header" />
+    <BaseHeader :data="data.header" />
     <div
       class="grid md:grid-cols-2 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
-      <div v-if="image">
+      <!-- <div v-if="image">
         <img :src="image" alt="image" class="w-full" />
-      </div>
+      </div> -->
+      <base-content :data="data.content"></base-content>
       <div>
-        <div
-          class="prose md:prose-xl w-full text-gray-600 text-justify"
-          v-if="content"
-          v-html="content"
-        ></div>
         <careers-form></careers-form>
       </div>
     </div>
@@ -23,18 +19,19 @@
 import CareersForm from '~/components/forms/CareersForm.vue'
 export default {
   components: { CareersForm },
-  async asyncData({ $strapi, $md }) {
-    const data = await $strapi.find('careers')
-    const content = $md.render(data.content)
-    const api_url = process.env.strapiBaseUri
-    const image = api_url + data.image.url
-    // Hardcoded Header for About us
-    const header = { title: 'Careers', description: null }
-    return {
-      header,
-      content,
-      image,
-    }
+  async asyncData({ $axios }) {
+    let data = await $axios.$get('/careers/', {
+      params: {
+        fields: [
+          '*.*',
+          'header.image.id',
+          'header.image.filename_disk',
+          'header.image.s3_url',
+        ],
+      },
+    })
+    data.data
+    return data
   },
 }
 </script>

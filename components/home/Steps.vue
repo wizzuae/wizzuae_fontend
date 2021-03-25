@@ -1,12 +1,16 @@
 <template>
   <div class="flex my-12">
     <div
-      class="ring-2 ring-primary ring-opacity-30 shadow-2xl rounded-full w-16 h-16 place-content-center text-center grid border-primary mr-6"
+      class="ring-2 ring-secondary ring-opacity-30 shadow-2xl rounded-full w-16 h-16 place-content-center text-center grid border-secondary mr-6"
     >
-      <img class="rounded-full" :src="assetUrl + step.icon.image.id" alt="" />
+      <img
+        class="rounded-full"
+        :src="step.icon.image.s3_url + step.icon.image.filename_disk"
+        alt=""
+      />
       <!-- <h1 class="text-3xl">{{ step.step }}</h1> -->
     </div>
-    <div>
+    <div class="text-neutral">
       <h1 class="text-xl font-bold">{{ step.title }}</h1>
       <p class="opacity-60">
         {{ step.description }}
@@ -14,7 +18,7 @@
       <div class="mt-6">
         <a :href="step.button.url">
           <button
-            class="rounded hover:text-secondary shadow-xl hover:bg-primary py-3 px-3 border border-primary border-opacity-30"
+            class="rounded hover:text-primary shadow-xl hover:bg-neutral py-3 px-3 border border-neutral border-opacity-30"
           >
             {{ step.button.title }}
           </button>
@@ -30,11 +34,6 @@ export default {
     step: {
       type: Object,
     },
-  },
-  data() {
-    return {
-      assetUrl: process.env.ASSET_URL,
-    }
   },
 }
 </script>

@@ -4,11 +4,11 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'wizz-uae-fontend',
+    title: 'Wizz - Your business begins here !',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -38,14 +38,18 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    'nuxt-windicss',
+    'nuxt-windicss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa', '@nuxtjs/strapi', '@nuxtjs/markdownit', '@nuxtjs/apollo'
+    '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/axios',
   ],
+
+  axios: {
+    baseURL: process.env.API_URL // Used as fallback if no runtime config is provided
+  },
   // This is for displaying rich text content in the frontend.
   markdownit: {
     preset: 'default',
@@ -55,33 +59,9 @@ export default {
     html: true
   },
 
-  strapi: {
-    // Options
-  },
-  apollo: {
-    // Tutorial Title: Leveraging the Power of GraphQL and NuxtJS
-    // Tutorial Link: https://labs.thisdot.co/blog/leveraging-the-power-of-graphql-and-nuxtjs
-    tokenName: "nuxt-apollo", // specify token name
-    cookieAttributes: {
-      expires: 7 // optional, default: 7 (days)
-    },
-    defaultOptions: {
-      $query: {
-        fetchPolicy: "network-only",
-        errorPolicy: "all"
-      }
-    },
-    watchLoading: "@/apollo/loadingHandler.js",
-    errorHandler: "@/apollo/errorHandler.js",
-    clientConfigs: {
-      default: {
-        httpEndpoint: 'http://localhost:8055/graphql',
-      }
-    }
-  },
   env: {
-    strapiBaseUri: "https://www.wizzuae.ae/",
-    ASSET_URL: process.env.ASSET_URL
+    ASSET_URL: process.env.ASSET_URL,
+    API_URL: process.env.API_URL
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

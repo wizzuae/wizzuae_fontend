@@ -1,10 +1,11 @@
 
 const colors = require('windicss/colors')
 const typography = require('windicss/plugin/typography')
+const aspect_ratio = require('windicss/plugin/aspect-ratio')
 
 module.exports = {
     darkMode: 'class',
-    plugins: [typography],
+    plugins: [typography, aspect_ratio],
     theme: {
         extend: {
             colors: {

@@ -1,9 +1,11 @@
 <template>
   <div>
-    <CoreHeader />
-    <div>
-      <Nuxt />
-      <NavbarMobile class="sticky text-center bottom-6" />
+    <div class="relative">
+      <CoreHeader />
+      <div>
+        <Nuxt />
+      </div>
+      <NavbarMobile class="fixed w-full text-center z-50 bottom-6" />
     </div>
     <CoreFooter />
   </div>

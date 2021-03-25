@@ -8,24 +8,28 @@
           class="grid px-6 xl:px-0 lg:grid-cols-2 py-12 max-w-screen-xl min-h-lg h-full mx-auto"
         >
           <div class="lg:my-auto text-left">
-            <div>
-              <h1
-                class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 text-primary uppercase"
-              >
-                {{ data.title }}
-              </h1>
-              <p class="tracking-widest text-cool-gray-800 opacity-90 text-xl">
-                {{ data.description }}
-              </p>
-            </div>
-            <div class="mt-6">
-              <router-link to="/about-us">
-                <button
-                  class="rounded text-primary border-opacity-10 shadow-2xl hover:text-secondary hover:bg-primary py-3 px-3 border border-primary"
+            <div v-for="(items, i) in data" :key="i">
+              <div v-if="items.collection === 'header'">
+                <h1
+                  class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 text-primary uppercase"
                 >
-                  {{ data.button.title }}
-                </button>
-              </router-link>
+                  {{ items.item.title }}
+                </h1>
+                <p
+                  class="tracking-widest text-cool-gray-800 opacity-90 text-xl"
+                >
+                  {{ items.item.description }}
+                </p>
+              </div>
+              <div v-if="items.collection === 'links'" class="mt-6">
+                <router-link :to="items.item.title">
+                  <button
+                    class="rounded text-primary border-opacity-10 shadow-2xl hover:text-secondary hover:bg-primary py-3 px-3 border border-primary"
+                  >
+                    {{ items.item.title }}
+                  </button>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
@@ -47,7 +51,7 @@
 export default {
   props: {
     data: {
-      type: Object,
+      type: Array,
     },
   },
   data() {

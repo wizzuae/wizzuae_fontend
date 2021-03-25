@@ -1,34 +1,31 @@
 <template>
   <div>
-    <BaseHeader :data="header" />
+    <BaseHeader :data="data.header" />
     <div
       class="grid grid-cols-1 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
-      <div v-if="image">
-        <img :src="image" class="" alt="image" />
-      </div>
-      <div
-        class="prose prose-xl mt-12 text-gray-600 mx-auto text-justify"
-        v-if="content"
-        v-html="content"
-      ></div>
+      <base-content :data="data.content"></base-content>
     </div>
   </div>
 </template>
 
 <script>
+import BaseContent from '~/components/base/BaseContent.vue'
 export default {
-  async asyncData({ $strapi, $md }) {
-    const data = await $strapi.find('about-us')
-    const content = $md.render(data.content)
-    const api_url = process.env.strapiBaseUri
-
-    // Hardcoded Header for About us
-    const header = { title: 'About us', description: null }
-    return {
-      header,
-      content,
-    }
+  components: { BaseContent },
+  async asyncData({ $axios }) {
+    let data = await $axios.$get('/about_us/', {
+      params: {
+        fields: [
+          '*.*',
+          'header.image.id',
+          'header.image.filename_disk',
+          'header.image.s3_url',
+        ],
+      },
+    })
+    data.data
+    return data
   },
 }
 </script>
