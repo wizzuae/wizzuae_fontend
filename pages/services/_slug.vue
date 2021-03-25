@@ -9,7 +9,7 @@
         </div>
       </div> -->
       <div
-        class="grid md:grid-cols-1 bg-neutral -mt-12 shadow-md gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
+        class="grid md:grid-cols-1 bg-neutral shadow-md gap-6 px-6 xl:px-0 md:py-12 max-w-screen-lg min-h-lg h-full mx-auto"
       >
         <base-content v-if="content" :data="content"></base-content>
       </div>
