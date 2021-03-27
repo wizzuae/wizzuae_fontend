@@ -61,7 +61,8 @@ export default {
 
   env: {
     ASSET_URL: process.env.ASSET_URL,
-    API_URL: process.env.API_URL
+    API_URL: process.env.API_URL,
+    FORM_ACTION_API: process.env.FORM_ACTION_API
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

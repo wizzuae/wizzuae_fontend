@@ -16,7 +16,12 @@
         {{ step.description }}
       </p>
       <div class="mt-6">
-        <a :href="step.button.url">
+        <appointment
+          v-if="step.button.title == 'Book Now'"
+          :title="step.button.title"
+          design="rounded font-bold hover:text-primary shadow-xl hover:bg-neutral py-3 px-3 border border-neutral border-opacity-30"
+        ></appointment>
+        <a :href="step.button.url" v-else>
           <button
             class="rounded hover:text-primary shadow-xl hover:bg-neutral py-3 px-3 border border-neutral border-opacity-30"
           >
@@ -29,7 +34,9 @@
 </template>
 
 <script>
+import Appointment from '../forms/Appointment.vue'
 export default {
+  components: { Appointment },
   props: {
     step: {
       type: Object,

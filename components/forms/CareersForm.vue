@@ -76,7 +76,39 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      notify: false,
+      full_name: '',
+      country: '',
+      email: '',
+      mobile: '',
+      message: '',
+    }
+  },
+  methods: {
+    async submitForm() {
+      await fetch(process.env.FORM_ACTION_API, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: this.full_name + ' want to join on the team',
+          full_name: this.full_name,
+          country: this.country,
+          email: this.email,
+          mobile: this.mobile,
+          message: this.message,
+        }),
+      }).then(() => {
+        this.model = false
+      })
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
