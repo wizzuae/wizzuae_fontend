@@ -11,7 +11,7 @@
             <div v-for="(items, i) in data" :key="i">
               <div v-if="items.collection === 'header'">
                 <h1
-                  class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 text-primary uppercase"
+                  class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 bg-primary text-transparent bg-clip-text uppercase"
                 >
                   {{ items.item.title }}
                 </h1>
@@ -62,7 +62,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .video-top-layer {
   background-image: linear-gradient(
     to right,

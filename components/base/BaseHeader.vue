@@ -1,16 +1,14 @@
 <template>
   <div
-    class="bg-gradient-to-r from-gray-900 via-primary to-blue-900 shadow-inner bg-cover"
-  >
-    <!-- :style="`
+    :style="`
       backgroundImage: url(${
-        data.image
-          ? data.image.s3_url + data.image.filename_disk
-          : 'https://wallpaperaccess.com/full/4318140.jpg'
-      });`" -->
-    <div class="grid md:grid-cols-2">
+        data.image ? data.image.s3_url + data.image.filename_disk : ''
+      });`"
+    class="shadow-inner aspect-w-4 aspect-h-2 md:aspect-h-1 bg-cover"
+  >
+    <div class="mask-layer flex h-full">
       <div
-        class="flex flex-col px-6 min-h-30 xl:px-0 text-left text-neutral max-w-screen-lg md:mx-auto"
+        class="flex flex-col px-6 xl:px-0 text-left w-full text-neutral max-w-screen-lg md:mx-auto"
       >
         <div class="my-auto">
           <h1
@@ -24,13 +22,15 @@
           </p>
         </div>
       </div>
-      <div class="flex justify-end">
-        <img
+
+      <!-- <div class="flex justify-end"> -->
+      <!-- <img
+          src="~/static/about-us.jpg"
           class="shadow-xl aspect-h-4"
-          :src="data.image.s3_url + data.image.filename_disk"
           alt="header image"
-        />
-      </div>
+        /> -->
+      <!-- src="data.image.s3_url + data.image.filename_disk" -->
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -45,5 +45,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
+.mask-layer {
+  background-image: linear-gradient(to right, #1e3a8a, rgba(255, 0, 0, 0));
+}
 </style>

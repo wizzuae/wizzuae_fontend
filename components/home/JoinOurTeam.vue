@@ -1,14 +1,12 @@
 <template>
-  <div
-    class="grid mt-16 grid-cols-1 bg-gradient-to-r from-gray-900 via-primary to-blue-900"
-  >
+  <div class="grid mt-16 grid-cols-1 bg-primary py-20">
     <div
       v-for="(items, i) in data"
       :key="i"
-      class="max-w-screen-xl px-6 xl:px-0 mx-auto py-12"
+      class="max-w-screen-xl px-6 xl:px-0 mx-auto"
     >
       <div v-if="items.collection === 'header'">
-        <div class="my-12 text-center text-neutral">
+        <div class="mb-12 text-center text-neutral">
           <h1 class="mb-5 text-3xl lg:text-6xl font-bold md:mb-8 uppercase">
             {{ items.item.title }}
           </h1>

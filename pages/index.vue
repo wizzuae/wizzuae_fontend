@@ -84,4 +84,7 @@ export default {
 </script>
 
 <style>
+.main-title {
+  @appy bg-primary text-transparent bg-clip-text;
+}
 </style>

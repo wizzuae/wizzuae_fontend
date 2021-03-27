@@ -270,6 +270,7 @@ export default {
         },
         body: JSON.stringify({
           _subject: this.full_name + ' created a new appointment',
+          _cc: 'saliha@wizzuae.ae,bhaktipatil@wizzuae.ae,team@visualout.com',
           full_name: this.full_name,
           email: this.email,
           mobile: this.mobile,
@@ -282,7 +283,7 @@ export default {
         setTimeout(() => {
           this.alert = false
           this.model = false
-        }, 10000)
+        }, 5000)
       })
     },
   },

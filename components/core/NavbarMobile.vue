@@ -46,9 +46,9 @@
     </div>
     <button
       @click="onClickMenu"
-      class="bg-gradient-to-br z-10 from-cool-gray-800 to-cool-gray-700 spring ring-2 ring-primary ring-opacity-30 rounded-full w-14 h-14 m-auto shadow-xl"
+      class="z-10 bg-primary spring ring-5 ring-brandBlue ring-opacity-30 rounded-full w-10 h-10 md:w-14 md:h-14 m-auto shadow-xl"
     >
-      <span class="text-sm rotate m-auto text-neutral">Menu</span>
+      <span class="text-xs md:text-sm rotate m-auto text-neutral">Menu</span>
     </button>
   </div>
 </template>

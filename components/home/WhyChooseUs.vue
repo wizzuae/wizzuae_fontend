@@ -5,7 +5,7 @@
     <!-- Header Section -->
     <div class="">
       <h1
-        class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 uppercase text-primary"
+        class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 uppercase bg-primary text-transparent bg-clip-text"
       >
         WHY CHOOSE US ?
       </h1>

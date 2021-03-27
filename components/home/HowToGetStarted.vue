@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-r from-gray-900 via-primary to-blue-900">
+  <div class="bg-primary">
     <div class="grid max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto py-24">
       <div class="lg:my-auto">
         <div v-for="(items, i) in data" :key="i">

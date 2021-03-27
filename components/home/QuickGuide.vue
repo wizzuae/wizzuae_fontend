@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-r from-gray-900 via-primary to-blue-900 py-24">
+  <div class="bg-primary py-24">
     <div
       class="grid md:grid-cols-2 gap-6 max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto"
     >

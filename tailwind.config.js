@@ -9,9 +9,12 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: "#164F63",
-                secondary: "#A3C0BA",
-                neutral: "#FAFAFA"
+                primary: "#1e3a8a",
+                secondary: "#EFF6FF",
+                neutral: "#FAFAFA",
+            },
+            backgroundImage: {
+                primary: 'linear-gradient(to right, #1e3a8a, #0891B2 70%, #1e3a8a )',
             },
         }
     }

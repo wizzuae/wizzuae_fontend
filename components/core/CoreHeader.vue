@@ -1,6 +1,6 @@
 <template>
   <div class="relative z-50">
-    <div class="bg-secondary max-w-screen h-8 hidden md:block">
+    <div class="bg-secondary max-w-screen h-9 hidden md:block">
       <div
         class="flex gap-6 items-center text-primary justify-end max-w-screen-xl px-6 xl:px-0 mx-auto"
       >
@@ -62,15 +62,39 @@
         <appointment></appointment>
       </div>
     </div>
-    <div class="py-3 bg-primary max-w-screen">
+    <div class="py-3 bg-primary shadow-xl max-w-screen">
       <div
         class="max-w-screen-xl px-6 xl:px-0 items-center flex justify-between mx-auto"
       >
         <Logo class="w-16 md:w-32" />
         <DesktopNavBar class="hidden md:block" />
-        <!-- <div class="md:hidden">
-          <appointment></appointment>
-        </div> -->
+        <div class="md:hidden">
+          <a
+            class="flex gap-2 text-neutral opacity-80"
+            type="button"
+            href="tel:+971 58 555 0070"
+          >
+            <span
+              class="rounded-full absolute border-3 bg-blue-400 animate-ping"
+            ></span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--ic"
+              width="22"
+              height="22"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 15.46l5.27-.61l2.52 2.52c2.83-1.44 5.15-3.75 6.59-6.59l-2.53-2.53l.61-5.25h5.51C21.55 13.18 13.18 21.55 3 20.97v-5.51z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
