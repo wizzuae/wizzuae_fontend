@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-for="({ item }, i) in data" :key="i">
-      <Hero v-if="item.slug === 'hero'" :data="item.content" />
+    <Hero v-if="hero" :data="hero" />
+    <div v-for="({ item }, i) in components" :key="i">
       <quick-guide v-if="item.slug === 'quick-guide'" :data="item.content" />
       <why-choose-us
         v-if="item.slug === 'why-choose-us'"
@@ -42,9 +42,10 @@ export default {
   },
   name: 'home',
   async asyncData({ $axios }) {
-    let data = await $axios.$get('/home', {
+    const data = await $axios.$get('/home', {
       params: {
         fields: [
+          'hero.slider_id.*.*',
           'components.item:sections.slug',
           'components.item:sections.content.collection',
           'components.item:sections.content.item:header.title',
@@ -77,8 +78,9 @@ export default {
         ],
       },
     })
-    data = data.data.components
-    return { data }
+    const components = data.data.components
+    const hero = data.data.hero
+    return { hero, components }
   },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid mt-16 grid-cols-1 bg-primary py-20">
+  <div class="grid grid-cols-1 bg-primary py-30">
     <div
       v-for="(items, i) in data"
       :key="i"
