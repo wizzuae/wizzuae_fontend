@@ -35,7 +35,7 @@
         class="absolute z-10 w-auto min-w-full min-h-full max-w-none shadow-inner shadow-2xl"
       >
         <!-- <fade-transition mode="out-in"> -->
-        <div v-for="(item, i) in data" :key="i">
+        <div v-for="i in data" :key="i">
           <img
             class="w-auto md:w-full transition duration-500 h-screen md:h-auto ease-in-out"
             :src="
