@@ -1,11 +1,11 @@
 <template>
   <div
-    class="flex flex-col flex-auto max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto my-18 md:my-30 text-center"
+    class="flex flex-col flex-auto max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto my-12 md:my-30 text-center"
   >
     <!-- Header Section -->
     <div>
       <h1
-        class="text-3xl lg:text-6xl font-bold mb-3 uppercase bg-primary text-transparent bg-clip-text"
+        class="text-3xl md:text-6xl font-bold mb-3 uppercase bg-primary text-transparent bg-clip-text"
       >
         WHY CHOOSE US ?
       </h1>
@@ -15,7 +15,7 @@
         We are highly qualified and experienced people with great vision.
       </p> -->
     </div>
-    <hr class="my-9 md:w-100 mx-auto" />
+    <hr class="md:my-9 md:w-100 mx-auto" />
     <!-- Body Section -->
     <div v-for="(items, i) in data" :key="i">
       <div v-if="items.collection === 'multi_icons'">

@@ -9,11 +9,13 @@
         >
           <div class="lg:my-auto text-left">
             <h1
-              class="text-3xl lg:text-6xl font-bold mb-3 md:mb-8 bg-primary text-transparent bg-clip-text uppercase"
+              class="text-3xl lg:text-6xl white font-bold mb-3 md:mb-8 bg-primary text-transparent bg-clip-text uppercase"
             >
               {{ currentSlider.title }}
             </h1>
-            <p class="tracking-widest text-cool-gray-800 opacity-90 text-xl">
+            <p
+              class="tracking-widest font-medium text-cool-gray-800 opacity-90 text-xl"
+            >
               {{ currentSlider.description }}
             </p>
 
@@ -29,24 +31,32 @@
           </div>
         </div>
       </div>
-      <div class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-        <transition-group name="fade" tag="div">
-          <div v-for="i in [currentIndex]" :key="i">
-            <img
-              class="w-full"
-              :src="
-                currentSlider.image.s3_url + currentSlider.image.filename_disk
-              "
-            />
-          </div>
-        </transition-group>
+      <div
+        class="absolute z-10 w-auto min-w-full min-h-full max-w-none shadow-inner shadow-2xl"
+      >
+        <!-- <fade-transition mode="out-in"> -->
+        <div v-for="(item, i) in data" :key="i">
+          <img
+            class="w-auto md:w-full transition duration-500 h-screen md:h-auto ease-in-out"
+            :src="
+              currentSlider.image.s3_url + currentSlider.image.filename_disk
+            "
+          />
+        </div>
+        <!-- </fade-transition> -->
       </div>
     </header>
   </div>
 </template>
 
 <script>
+// import FadeTransition from '~/components/transitions/FadeTransition.vue'
+
 export default {
+  name: 'Hero',
+  // components: {
+  //   FadeTransition,
+  // },
   props: {
     data: {
       type: Array,
@@ -65,7 +75,7 @@ export default {
 
   methods: {
     startSlide: function () {
-      this.timer = setInterval(this.next, 10000)
+      this.timer = setInterval(this.next, 5000)
     },
 
     next: function () {
@@ -91,21 +101,5 @@ export default {
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0) 80%
   );
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.9s ease;
-  overflow: hidden;
-  visibility: visible;
-  position: absolute;
-  width: 100%;
-  opacity: 1;
-}
-
-.fade-enter,
-.fade-leave-to {
-  visibility: hidden;
-  width: 100%;
-  opacity: 0;
 }
 </style>

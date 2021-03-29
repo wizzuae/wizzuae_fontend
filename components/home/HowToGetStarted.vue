@@ -1,11 +1,13 @@
 <template>
   <div class="bg-primary">
-    <div class="grid max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto py-24">
+    <div
+      class="grid max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto py-12 md:py-30"
+    >
       <div class="lg:my-auto">
         <div v-for="(items, i) in data" :key="i">
           <div
             v-if="items.collection === 'header'"
-            class="my-12 text-center text-neutral"
+            class="text-center text-neutral"
           >
             <h1 class="mb-3 text-3xl lg:text-6xl font-bold md:mb-8 uppercase">
               {{ items.item.title }}

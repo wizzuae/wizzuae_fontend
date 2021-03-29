@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex text-center max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto flex-col items-center px-6 md:py-30"
+    class="flex text-center max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto flex-col items-center px-6 py-12 md:py-30"
   >
     <div v-for="(items, i) in data" :key="i">
       <h1

@@ -245,7 +245,7 @@ export default {
     },
     title: {
       type: String,
-      default: 'Take Appointment',
+      default: 'Book Appointment',
     },
   },
   data() {
