@@ -50,7 +50,7 @@
           <li
             v-for="(subItem, i) in item.sub"
             :key="i"
-            class="rounded-sm relative px-3 py-1 hover:bg-gray-100"
+            class="rounded-sm relative px-3 py-1 hover:hover:bg-blue-900"
           >
             <NuxtLink
               :to="
@@ -78,7 +78,7 @@
               <li
                 v-for="(deepItem, i) in subItem.sub"
                 :key="i"
-                class="px-3 py-1 hover:bg-gray-100"
+                class="px-3 py-1 hover:bg-blue-900"
               >
                 <NuxtLink :to="subItem.slug">
                   {{ deepItem.title }}
