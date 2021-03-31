@@ -1,6 +1,6 @@
-# wizz-uae-fontend
+Wizz - Your business begins here !
 
-## Build Setup
+Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.
 
 ```bash
 # install dependencies

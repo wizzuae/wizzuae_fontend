@@ -1,5 +1,5 @@
 {
-  "name": "wizz-uae-fontend",
+  "name": "wizz-uae",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "fibers": "^5.0.0",
     "nuxt-vite": "^0.0.36",
-    "nuxt-windicss": "^0.4.4",
+    "nuxt-windicss": "^0.5.3",
     "prettier": "^2.2.1",
     "sass": "^1.32.8",
     "sass-loader": "10"
