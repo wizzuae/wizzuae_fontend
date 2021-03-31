@@ -4,7 +4,7 @@
   >
     <div v-for="(items, i) in data" :key="i">
       <h1
-        class="text-2xl lg:text-6xl uppercase bg-primary text-transparent bg-clip-text font-bold"
+        class="text-2xl md:text-5xl lg:text-6xl uppercase bg-primary text-transparent bg-clip-text font-bold"
       >
         WE WORK CLOSELY WITH ALL GOVERNMENT AGENCIES
       </h1>

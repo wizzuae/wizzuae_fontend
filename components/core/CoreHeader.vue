@@ -1,6 +1,6 @@
 <template>
   <div class="relative z-50">
-    <div class="bg-secondary max-w-screen h-9 hidden md:block">
+    <div class="bg-secondary max-w-screen h-9 hidden lg:block">
       <div
         class="flex gap-6 items-center text-primary justify-end max-w-screen-xl px-6 xl:px-0 mx-auto"
       >
@@ -66,9 +66,9 @@
       <div
         class="max-w-screen-xl px-6 xl:px-0 items-center flex justify-between mx-auto"
       >
-        <Logo class="w-16 md:w-32" />
-        <DesktopNavBar class="hidden md:block" />
-        <div class="md:hidden">
+        <Logo class="w-16 md:w-20 lg:w-32" />
+        <DesktopNavBar class="hidden lg:block" />
+        <div class="lg:hidden">
           <a
             class="flex gap-2 text-neutral opacity-80"
             type="button"

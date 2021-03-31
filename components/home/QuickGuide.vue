@@ -1,7 +1,7 @@
 <template>
   <div class="bg-primary py-24">
     <div
-      class="grid md:grid-cols-2 gap-6 max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto"
+      class="grid lg:grid-cols-2 gap-6 max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto"
     >
       <div class="lg:my-auto text-left">
         <div v-for="(items, i) in data" :key="i">
@@ -20,7 +20,7 @@
             v-if="items.collection === 'multi_links'"
             class="mt-6 text-lg text-neutral"
           >
-            <ul class="capitalize grid md:grid-cols-2 gap-4">
+            <ul class="capitalize grid lg:grid-cols-2 gap-4">
               <li
                 v-for="({ links_id }, index) in items.item.links"
                 :key="index"
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="md:order-first mt-6">
+      <div class="lg:order-first mt-6">
         <giving-hand />
       </div>
     </div>

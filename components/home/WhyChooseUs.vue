@@ -5,7 +5,7 @@
     <!-- Header Section -->
     <div>
       <h1
-        class="text-3xl md:text-6xl font-bold mb-3 uppercase bg-primary text-transparent bg-clip-text"
+        class="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 uppercase bg-primary text-transparent bg-clip-text"
       >
         WHY CHOOSE US ?
       </h1>
@@ -36,7 +36,7 @@
                   alt=""
                 />
               </div>
-              <div class="md:text-3xl mt-6 uppercase">
+              <div class="md:text-2xl lg:text-3xl mt-6 uppercase">
                 {{ icons_id.title }}
               </div>
             </div>

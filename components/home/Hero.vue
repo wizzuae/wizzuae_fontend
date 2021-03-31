@@ -35,9 +35,9 @@
         class="absolute z-10 w-auto min-w-full min-h-full max-w-none shadow-inner shadow-2xl"
       >
         <!-- <fade-transition mode="out-in"> -->
-        <div v-for="i in data" :key="i">
+        <div v-for="(item, i) in data" :key="i">
           <img
-            class="w-auto md:w-full transition duration-500 h-screen md:h-auto ease-in-out"
+            class="w-auto lg:w-full transition duration-500 h-screen ease-in-out"
             :src="
               currentSlider.image.s3_url + currentSlider.image.filename_disk
             "

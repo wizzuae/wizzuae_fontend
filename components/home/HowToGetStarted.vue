@@ -1,7 +1,7 @@
 <template>
   <div class="bg-primary">
     <div
-      class="grid max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto py-12 md:py-30"
+      class="grid max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto py-12 md:py-25 lg:py-30"
     >
       <div class="lg:my-auto">
         <div v-for="(items, i) in data" :key="i">
@@ -9,7 +9,9 @@
             v-if="items.collection === 'header'"
             class="text-center text-neutral"
           >
-            <h1 class="mb-3 text-3xl lg:text-6xl font-bold md:mb-8 uppercase">
+            <h1
+              class="mb-3 text-3xl md:text-5xl lg:text-6xl font-bold md:mb-8 uppercase"
+            >
               {{ items.item.title }}
             </h1>
             <p class="opacity-50">
@@ -18,7 +20,7 @@
           </div>
           <div
             v-if="items.collection === 'multi_cards'"
-            class="flex flex-col md:flex-row md:divide-x md:divide-primary md:divide-opacity-5 md:gap-4 mt-6 text-primary"
+            class="flex flex-col lg:flex-row lg:divide-x lg:divide-primary lg:divide-opacity-5 lg:gap-4 mt-6 text-primary"
           >
             <Steps
               v-for="({ cards_id }, i) in items.item.cards"
