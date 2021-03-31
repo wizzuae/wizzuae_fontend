@@ -70,7 +70,6 @@
           <span class="text-xl">{{ data.phone }}</span>
         </a>
         <div>
-          dfddfd
           <!-- <div id="tawk_60421191385de407571cdd87"></div> -->
         </div>
       </div>
