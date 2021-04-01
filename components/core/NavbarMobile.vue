@@ -7,18 +7,15 @@
       <nav
         class="flex capitalize flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
       >
-        <router-link class="icon-btn py-2" to="/services/business-setup">
+        <!-- <router-link class="icon-btn py-2" to="/services/business-setup">
           Business Setup
+        </router-link> -->
+        <router-link
+          v-for="(item, i) in mobileServices"
+          class="icon-btn py-2"
+          :to="item.slug"
+          >{{ item.title }}
         </router-link>
-        <router-link class="icon-btn py-2" to="/services/pro-and-visa-services"
-          >Pro & VISA Services
-        </router-link>
-        <router-link class="icon-btn py-2" to="/services/registration-services"
-          >Registration Services
-        </router-link>
-        <router-link class="icon-btn py-2" to="/services/financial-services"
-          >Financial Services</router-link
-        >
       </nav>
     </div>
     <div
@@ -29,12 +26,12 @@
         class="flex flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
       >
         <button class="py-2" @click="$router.replace('/')">Home</button>
+        <button class="py-2" @click="$router.replace('/business-setup')">
+          Business Setup
+        </button>
         <button class="py-2" @click="setServices">Services</button>
         <button class="py-2" @click="$router.replace('/about-us')">
           About us
-        </button>
-        <button class="py-2" @click="$router.replace('/clients')">
-          Our Clients
         </button>
         <button class="py-2" @click="$router.replace('/careers')">
           Careers
@@ -54,11 +51,38 @@
 </template>
 
 <script>
+const mobileServices = [
+  {
+    title: 'PRO & VISA Services',
+    slug: '/services/pro-and-visa-services',
+  },
+  {
+    title: 'Business Protection & Trademark Registration Services',
+    slug: '/services/business-protection-and-trademark-registration',
+  },
+  {
+    title: 'Investor Right Protection',
+    slug: '/services/investor-rights-and-protection',
+  },
+  {
+    title: 'Certificate Attestation Embassy Services',
+    slug: '/services/certificate-attestation-embassy-services',
+  },
+  {
+    title: 'Business for Sale',
+    slug: '/services/business-for-sale',
+  },
+  {
+    title: 'Financial Services',
+    slug: '/services/financial-services',
+  },
+]
 export default {
   data() {
     return {
       menu: false,
       service: false,
+      mobileServices: mobileServices,
     }
   },
   methods: {
