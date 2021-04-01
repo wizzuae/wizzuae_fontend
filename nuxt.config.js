@@ -4,7 +4,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Wizz - Your business begins here !',
+    titleTemplate: '%s - ' + 'Your business begins here !',
+    title: 'Wizz' || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -32,8 +33,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [{ src: '~/plugins/vue-gtag', }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -48,7 +48,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/axios',
+    '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/sitemap',
   ],
 
   axios: {

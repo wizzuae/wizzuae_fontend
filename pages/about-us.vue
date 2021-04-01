@@ -27,6 +27,24 @@ export default {
     data.data
     return data
   },
+  head() {
+    return {
+      title: 'About Us',
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: 'About Us',
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'WIZZ is a team of experts and experienced professionals having spent more than 12 years of fruitful journey in company formation, business setup, licensing, visa processing, and PRO services.',
+        },
+      ],
+    }
+  },
 }
 </script>
 
