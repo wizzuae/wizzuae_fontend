@@ -50,6 +50,9 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/sitemap',
   ],
+  sitemap: {
+    hostname: 'https://www.wizzuae.ae',
+  },
 
   axios: {
     baseURL: process.env.API_URL // Used as fallback if no runtime config is provided
