@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Hero v-if="hero" :data="hero" />
-    <div v-for="({ item }, i) in components" :key="i">
+    <Hero v-if="hero" :data="hero" class="section" />
+    <div class="section" v-for="({ item }, i) in components" :key="i">
       <quick-guide v-if="item.slug === 'quick-guide'" :data="item.content" />
       <why-choose-us
         v-if="item.slug === 'why-choose-us'"
@@ -66,6 +66,7 @@ export default {
           'components.item:sections.content.item:multi_cards.cards.cards_id.title',
           'components.item:sections.content.item:multi_cards.cards.cards_id.description',
           'components.item:sections.content.item:multi_cards.cards.cards_id.icon.title',
+          'components.item:sections.content.item:multi_cards.cards.cards_id.icon.icon',
           'components.item:sections.content.item:multi_cards.cards.cards_id.icon.image.id',
           'components.item:sections.content.item:multi_cards.cards.cards_id.icon.image.s3_url',
           'components.item:sections.content.item:multi_cards.cards.cards_id.icon.image.filename_disk',
@@ -88,5 +89,9 @@ export default {
 <style>
 .main-title {
   @appy bg-primary text-transparent bg-clip-text;
+}
+
+.section {
+  /* scroll-snap-align: center; */
 }
 </style>

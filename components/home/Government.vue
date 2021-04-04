@@ -14,7 +14,7 @@
         class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4"
       >
         <div
-          class="shadow-lg"
+          class="shadow-lg hover:shadow-2xl"
           v-for="({ brands_id }, i) in items.item.brands"
           :key="i"
         >

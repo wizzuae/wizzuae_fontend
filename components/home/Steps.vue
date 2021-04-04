@@ -1,14 +1,9 @@
 <template>
-  <div class="flex my-12">
+  <div class="flex my-12 gap-4">
     <div
-      class="ring-2 ring-secondary ring-opacity-30 shadow-2xl rounded-full w-16 h-16 place-content-center text-center grid border-secondary mr-6"
+      class="ring-2 ring-secondary text-neutral ring-opacity-30 shadow-2xl hover:ring-opacity-100 rounded-full w-16 h-16 flex justify-center items-center text-center border-secondary"
     >
-      <img
-        class="rounded-full"
-        :src="step.icon.image.s3_url + step.icon.image.filename_disk"
-        alt=""
-      />
-      <!-- <h1 class="text-3xl">{{ step.step }}</h1> -->
+      <span class="transform hover:( scale-120)" v-html="step.icon.icon"></span>
     </div>
     <div class="text-neutral">
       <h1 class="text-xl font-bold">{{ step.title }}</h1>
