@@ -79,15 +79,15 @@ const mobileServices = [
   },
   {
     title: 'Notarization',
-    slug: '/notarization',
+    slug: '/services/notarization',
   },
   {
     title: 'Local Sponsorship',
-    slug: '/local-sponsorship',
+    slug: '/services/local-sponsorship',
   },
   {
     title: 'Bank Account Assistance',
-    slug: '/bank-account-assistance',
+    slug: '/services/bank-account-assistance',
   },
 ]
 export default {
