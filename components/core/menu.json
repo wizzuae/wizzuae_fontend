@@ -35,6 +35,18 @@
             {
                 "title": "Financial Services",
                 "slug": "financial-services"
+            },
+            {
+                "title": "Notarization",
+                "slug": "notarization"
+            },
+            {
+                "title": "Local Sponsorship",
+                "slug": "local-sponsorship"
+            },
+            {
+                "title": "Bank Account Assistance",
+                "slug": "bank-account-assistance"
             }
         ]
     },

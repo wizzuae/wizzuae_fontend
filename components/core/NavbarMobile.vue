@@ -14,6 +14,7 @@
           v-for="(item, i) in mobileServices"
           class="icon-btn py-2"
           :to="item.slug"
+          :key="i"
           >{{ item.title }}
         </router-link>
       </nav>
@@ -75,6 +76,18 @@ const mobileServices = [
   {
     title: 'Financial Services',
     slug: '/services/financial-services',
+  },
+  {
+    title: 'Notarization',
+    slug: '/notarization',
+  },
+  {
+    title: 'Local Sponsorship',
+    slug: '/local-sponsorship',
+  },
+  {
+    title: 'Bank Account Assistance',
+    slug: '/bank-account-assistance',
   },
 ]
 export default {
