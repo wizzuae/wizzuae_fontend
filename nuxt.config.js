@@ -48,12 +48,18 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/sitemap',
+    '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/axios', '@nuxtjs/sitemap', 'nuxt-facebook-pixel-module',
   ],
   sitemap: {
     hostname: 'https://www.wizzuae.ae',
   },
-
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '436707010964698',
+    autoPageView: true,
+    disabled: false
+  },
   axios: {
     baseURL: process.env.API_URL // Used as fallback if no runtime config is provided
   },
