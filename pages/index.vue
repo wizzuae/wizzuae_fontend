@@ -46,6 +46,7 @@ export default {
       params: {
         fields: [
           'hero.slider_id.*.*',
+          'metadata.meta_id.*.*',
           'components.item:sections.slug',
           'components.item:sections.content.collection',
           'components.item:sections.content.item:header.title',
@@ -79,9 +80,30 @@ export default {
         ],
       },
     })
+
+    const metadata = data.data.metadata
+
+    let i = 0
+    let len = metadata.length
+    let meta = []
+
+    for (i; i < len; i++) {
+      meta.push({
+        hid: metadata[i].meta_id.name,
+        name: metadata[i].meta_id.name,
+        content: metadata[i].meta_id.content,
+      })
+    }
+
     const components = data.data.components
     const hero = data.data.hero
-    return { hero, components }
+    return { hero, components, meta }
+  },
+  head() {
+    return {
+      title: 'Home',
+      meta: this.meta,
+    }
   },
 }
 </script>

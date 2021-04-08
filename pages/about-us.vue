@@ -70,6 +70,7 @@ export default {
           'header.image.id',
           'header.image.filename_disk',
           'header.image.s3_url',
+          'metadata.meta_id.*.*',
         ],
       },
     })
@@ -84,25 +85,24 @@ export default {
         ],
       },
     })
+    const metadata = about.data.metadata
+    let i = 0
+    let len = metadata.length
+    let meta = []
 
-    return { about, clients }
+    for (i; i < len; i++) {
+      meta.push({
+        hid: metadata[i].meta_id.name,
+        name: metadata[i].meta_id.name,
+        content: metadata[i].meta_id.content,
+      })
+    }
+    return { about, clients, meta }
   },
   head() {
     return {
       title: 'About Us',
-      meta: [
-        {
-          hid: 'title',
-          name: 'title',
-          content: 'About Us',
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'WIZZ is a team of experts and experienced professionals having spent more than 12 years of fruitful journey in company formation, business setup, licensing, visa processing, and PRO services.',
-        },
-      ],
+      meta: this.meta,
     }
   },
 }

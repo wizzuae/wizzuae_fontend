@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ' + 'Your business begins here !',
+    titleTemplate: '%s - ' + 'Wizz - Your business begins here !',
     title: 'Wizz' || '',
     meta: [
       { charset: 'utf-8' },

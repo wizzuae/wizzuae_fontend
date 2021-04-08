@@ -27,7 +27,7 @@ export default {
     let data = await $axios.$get('/services/', {
       params: {
         filter: { slug: { _eq: params.slug } },
-        fields: ['*.*'],
+        fields: ['*.*', 'metadata.meta_id.*.*'],
       },
     })
     data = data.data[0]
@@ -36,7 +36,26 @@ export default {
       image: data.image,
     }
     const content = data.content
-    return { header, content }
+
+    const metadata = data.metadata
+    let i = 0
+    let len = metadata.length
+    let meta = []
+
+    for (i; i < len; i++) {
+      meta.push({
+        hid: metadata[i].meta_id.name,
+        name: metadata[i].meta_id.name,
+        content: metadata[i].meta_id.content,
+      })
+    }
+    return { header, content, meta }
+  },
+  head() {
+    return {
+      title: this.header.title,
+      meta: this.meta,
+    }
   },
 }
 </script>

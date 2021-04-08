@@ -20,18 +20,36 @@ import CareersForm from '~/components/forms/CareersForm.vue'
 export default {
   components: { CareersForm },
   async asyncData({ $axios }) {
-    let data = await $axios.$get('/careers/', {
+    const { data } = await $axios.$get('/careers/', {
       params: {
         fields: [
           '*.*',
+          'metadata.meta_id.*.*',
           'header.image.id',
           'header.image.filename_disk',
           'header.image.s3_url',
         ],
       },
     })
-    data.data
-    return data
+    const metadata = data.metadata
+    let i = 0
+    let len = metadata.length
+    let meta = []
+
+    for (i; i < len; i++) {
+      meta.push({
+        hid: metadata[i].meta_id.name,
+        name: metadata[i].meta_id.name,
+        content: metadata[i].meta_id.content,
+      })
+    }
+    return { data, meta }
+  },
+  head() {
+    return {
+      title: 'Careers',
+      meta: this.meta,
+    }
   },
 }
 </script>
