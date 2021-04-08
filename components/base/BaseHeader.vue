@@ -47,6 +47,10 @@ export default {
 
 <style  scoped>
 .mask-layer {
-  background-image: linear-gradient(to right, #1e3a8a, rgba(255, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 1, 94),
+    rgba(255, 0, 0, 0)
+  );
 }
 </style>

@@ -58,20 +58,12 @@ const mobileServices = [
     slug: '/services/pro-and-visa-services',
   },
   {
-    title: 'Business Protection & Trademark Registration Services',
-    slug: '/services/business-protection-and-trademark-registration',
+    title: 'Local Sponsorship',
+    slug: '/services/local-sponsorship',
   },
   {
-    title: 'Investor Right Protection',
-    slug: '/services/investor-rights-and-protection',
-  },
-  {
-    title: 'Certificate Attestation Embassy Services',
-    slug: '/services/certificate-attestation-embassy-services',
-  },
-  {
-    title: 'Business for Sale',
-    slug: '/services/business-for-sale',
+    title: 'Bank Account Assistance',
+    slug: '/services/bank-account-assistance',
   },
   {
     title: 'Financial Services',
@@ -82,12 +74,16 @@ const mobileServices = [
     slug: '/services/notarization',
   },
   {
-    title: 'Local Sponsorship',
-    slug: '/services/local-sponsorship',
+    title: 'Investor Right Protection',
+    slug: '/services/investor-rights-and-protection',
   },
   {
-    title: 'Bank Account Assistance',
-    slug: '/services/bank-account-assistance',
+    title: 'Certificate Attestation Embassy Services',
+    slug: '/services/certificate-attestation-embassy-services',
+  },
+  {
+    title: 'Business Protection & Trademark Registration Services',
+    slug: '/services/business-protection-and-trademark-registration',
   },
 ]
 export default {
