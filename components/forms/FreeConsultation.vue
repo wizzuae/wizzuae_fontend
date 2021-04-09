@@ -102,21 +102,24 @@ export default {
   methods: {
     async submitForm() {
       this.loading = true
-      await fetch(process.env.FORM_ACTION_API, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          _subject: this.full_name + ' requested for a free consultation',
-          _cc: 'saliha@wizzuae.ae,bhaktipatil@wizzuae.ae,team@visualout.com',
-          full_name: this.full_name,
-          email: this.email,
-          mobile: this.mobile,
-          message: this.message,
-        }),
-      }).then(() => {
+      await fetch(
+        'https://formsubmit.co/ajax/fee43215d7705bf93f00d4da9f2d8f30',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            _subject: this.full_name + ' requested for a free consultation',
+            _cc: 'saliha@wizzuae.ae,bhaktipatil@wizzuae.ae,team@visualout.com',
+            full_name: this.full_name,
+            email: this.email,
+            mobile: this.mobile,
+            message: this.message,
+          }),
+        }
+      ).then(() => {
         this.full_name = ''
         this.email = ''
         this.mobile = ''
