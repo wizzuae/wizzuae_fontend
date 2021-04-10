@@ -1,6 +1,6 @@
 <template>
   <div
-    class="prose md:prose-xl my-12 content mx-auto text-gray-600"
+    class="prose md:prose-xl my-12 content mx-auto text-gray-600 markdown"
     v-if="data"
     v-html="$md.render(data)"
   ></div>
@@ -15,5 +15,10 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style  lang="scss">
+.markdown {
+  h3 {
+    @apply text-primary;
+  }
+}
 </style>

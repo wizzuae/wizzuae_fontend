@@ -2,9 +2,43 @@
   <div>
     <BaseHeader :data="about.data.header" />
     <div
-      class="grid grid-cols-1 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
+      class="grid grid-cols-1 gap-6 px-6 xl:px-0 md:py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
       <base-content :data="about.data.content"></base-content>
+    </div>
+    <div class="bg-primary py-30">
+      <div
+        class="grid gap-6 grid-cols-1 md:grid-cols-2 px-6 xl:px-0 max-w-screen-lg min-h-lg h-full mx-auto"
+      >
+        <div
+          class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-purple-50"
+        >
+          <header class="mb-3 md:mb-6">
+            <h1
+              class="text-primary text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold"
+            >
+              Our Mission
+            </h1>
+          </header>
+          <div>
+            <base-content :data="about.data.mission"></base-content>
+          </div>
+        </div>
+        <div
+          class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-purple-50"
+        >
+          <header class="mb-3 md:mb-6">
+            <h1
+              class="text-primary text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold"
+            >
+              Our Vision
+            </h1>
+          </header>
+          <div>
+            <base-content :data="about.data.vision"></base-content>
+          </div>
+        </div>
+      </div>
     </div>
     <div
       class="bg-fixed"

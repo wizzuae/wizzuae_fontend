@@ -1,5 +1,7 @@
 <template>
-  <div class="flex h-full w-full xl:justify-center hidden lg:flex ml-10">
+  <div
+    class="flex h-full w-full xl:justify-center hidden lg:flex ml-10 relative"
+  >
     <div
       class="lg:max-w-2/3 self-center place-self-center xl:max-w-1/2 bg-white bg-opacity-90 px-6 pt-6 rounded-2xl"
     >
@@ -78,7 +80,7 @@
       </form>
     </div>
     <img
-      class="absolute bottom-0 right-10 lg:w-45 w-28"
+      class="absolute right-10 lg:w-45 w-28 self-center"
       :src="image"
       alt="Get a Free Consultation"
     />
