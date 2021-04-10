@@ -2,9 +2,43 @@
   <div>
     <BaseHeader :data="about.data.header" />
     <div
-      class="grid grid-cols-1 gap-6 px-6 xl:px-0 py-12 max-w-screen-lg min-h-lg h-full mx-auto"
+      class="grid grid-cols-1 gap-6 px-6 xl:px-0 md:py-12 max-w-screen-lg min-h-lg h-full mx-auto"
     >
       <base-content :data="about.data.content"></base-content>
+    </div>
+    <div class="bg-primary py-30">
+      <div
+        class="grid gap-6 grid-cols-1 md:grid-cols-2 px-6 xl:px-0 max-w-screen-lg min-h-lg h-full mx-auto"
+      >
+        <div
+          class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-purple-50"
+        >
+          <header class="mb-3 md:mb-6">
+            <h1
+              class="text-primary text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold"
+            >
+              Our Mission
+            </h1>
+          </header>
+          <div>
+            <base-content :data="about.data.mission"></base-content>
+          </div>
+        </div>
+        <div
+          class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-purple-50"
+        >
+          <header class="mb-3 md:mb-6">
+            <h1
+              class="text-primary text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold"
+            >
+              Our Vision
+            </h1>
+          </header>
+          <div>
+            <base-content :data="about.data.vision"></base-content>
+          </div>
+        </div>
+      </div>
     </div>
     <div
       class="bg-fixed"
@@ -70,6 +104,7 @@ export default {
           'header.image.id',
           'header.image.filename_disk',
           'header.image.s3_url',
+          'metadata.meta_id.*.*',
         ],
       },
     })
@@ -84,25 +119,24 @@ export default {
         ],
       },
     })
+    const metadata = about.data.metadata
+    let i = 0
+    let len = metadata.length
+    let meta = []
 
-    return { about, clients }
+    for (i; i < len; i++) {
+      meta.push({
+        hid: metadata[i].meta_id.name,
+        name: metadata[i].meta_id.name,
+        content: metadata[i].meta_id.content,
+      })
+    }
+    return { about, clients, meta }
   },
   head() {
     return {
       title: 'About Us',
-      meta: [
-        {
-          hid: 'title',
-          name: 'title',
-          content: 'About Us',
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'WIZZ is a team of experts and experienced professionals having spent more than 12 years of fruitful journey in company formation, business setup, licensing, visa processing, and PRO services.',
-        },
-      ],
+      meta: this.meta,
     }
   },
 }

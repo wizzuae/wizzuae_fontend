@@ -69,43 +69,46 @@
           </svg>
           <span class="text-xl">{{ data.phone }}</span>
         </a>
-        <div>
-          <!-- <div id="tawk_60421191385de407571cdd87"></div> -->
-        </div>
       </div>
     </div>
-    <div>
-      <!--Start of Tawk.to Script-->
-      <!-- <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date(); Tawk_API.embedded='tawk_60421191385de407571cdd87';
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/60421191385de407571cdd87/1f1l6bsqm';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);})();
-</script> -->
-      <!--End of Tawk.to Script-->
-    </div>
+    <div></div>
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $axios }) {
-    let data = await $axios.$get('/contact_us/', {
+    const { data } = await $axios.$get('/contact_us/', {
       params: {
         fields: [
           '*.*',
+          'metadata.meta_id.*.*',
           'header.image.id',
           'header.image.filename_disk',
           'header.image.s3_url',
         ],
       },
     })
-    data.data
-    return data
+    const metadata = data.metadata
+    let i = 0
+    let len = metadata.length
+    let meta = []
+
+    for (i; i < len; i++) {
+      meta.push({
+        hid: metadata[i].meta_id.name,
+        name: metadata[i].meta_id.name,
+        content: metadata[i].meta_id.content,
+      })
+    }
+
+    return { data, meta }
+  },
+  head() {
+    return {
+      title: 'Contact Us',
+      meta: this.meta,
+    }
   },
 }
 </script>

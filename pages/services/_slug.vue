@@ -1,17 +1,9 @@
 <template>
   <div>
-    <div>
-      <BaseHeader v-if="header" :data="header" />
-      <!-- <div v-if="$route.params.slug == 'business-setup'">
-        <div>
-          <img src="" alt="xxz" srcset="" />
-          <h1>Mainland</h1>
-        </div>
-      </div> -->
-      <div class="md:py-12 max-w-screen-lg min-h-lg h-full mx-auto">
-        <!-- <base-content v-if="content" :data="content"></base-content> -->
-        <base-contents :data="contents"></base-contents>
-      </div>
+    <BaseHeader v-if="header" :data="header" />
+    <div class="md:py-12 max-w-screen-lg min-h-lg h-full mx-auto">
+      <base-content v-if="content" :data="content"></base-content>
+      <base-contents :data="contents"></base-contents>
     </div>
   </div>
 </template>
@@ -29,6 +21,7 @@ export default {
         filter: { slug: { _eq: params.slug } },
         fields: [
           '*.*',
+          'metadata.meta_id.*.*',
           'contents.row_id.*',
           'contents.row_id.items.collection',
           'contents.row_id.items.item.*.*',
@@ -42,7 +35,26 @@ export default {
     }
     const content = data.content
     const contents = data.contents
-    return { header, content, contents }
+
+    const metadata = data.metadata
+    let i = 0
+    let len = metadata.length
+    let meta = []
+
+    for (i; i < len; i++) {
+      meta.push({
+        hid: metadata[i].meta_id.name,
+        name: metadata[i].meta_id.name,
+        content: metadata[i].meta_id.content,
+      })
+    }
+    return { header, meta, content, contents }
+  },
+  head() {
+    return {
+      title: this.header.title,
+      meta: this.meta,
+    }
   },
 }
 </script>

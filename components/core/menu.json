@@ -17,20 +17,12 @@
                 "slug": "pro-and-visa-services"
             },
             {
-                "title": "Business Protection & Trademark Registration Services",
-                "slug": "business-protection-and-trademark-registration"
+                "title": "Local Sponsorship",
+                "slug": "local-sponsorship"
             },
             {
-                "title": "Investor Right Protection",
-                "slug": "investor-rights-and-protection"
-            },
-            {
-                "title": "Certificate Attestation Embassy Services",
-                "slug": "certificate-attestation-embassy-services"
-            },
-            {
-                "title": "Business for Sale",
-                "slug": "business-for-sale"
+                "title": "Bank Account Assistance",
+                "slug": "bank-account-assistance"
             },
             {
                 "title": "Financial Services",
@@ -41,12 +33,16 @@
                 "slug": "notarization"
             },
             {
-                "title": "Local Sponsorship",
-                "slug": "local-sponsorship"
+                "title": "Investor Right Protection",
+                "slug": "investor-rights-and-protection"
             },
             {
-                "title": "Bank Account Assistance",
-                "slug": "bank-account-assistance"
+                "title": "Certificate Attestation Embassy Services",
+                "slug": "certificate-attestation-embassy-services"
+            },
+            {
+                "title": "Business Protection & Trademark Registration Services",
+                "slug": "business-protection-and-trademark-registration"
             }
         ]
     },

@@ -262,23 +262,26 @@ export default {
   },
   methods: {
     async submitForm() {
-      await fetch(process.env.FORM_ACTION_API, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          _subject: this.full_name + ' created a new appointment',
-          _cc: 'saliha@wizzuae.ae,bhaktipatil@wizzuae.ae,team@visualout.com',
-          full_name: this.full_name,
-          email: this.email,
-          mobile: this.mobile,
-          date: this.date,
-          time: this.time,
-          message: this.message,
-        }),
-      }).then(() => {
+      await fetch(
+        'https://formsubmit.co/ajax/fee43215d7705bf93f00d4da9f2d8f30',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            _subject: this.full_name + ' created a new appointment',
+            _cc: 'saliha@wizzuae.ae,bhaktipatil@wizzuae.ae,team@visualout.com',
+            full_name: this.full_name,
+            email: this.email,
+            mobile: this.mobile,
+            date: this.date,
+            time: this.time,
+            message: this.message,
+          }),
+        }
+      ).then(() => {
         this.alert = true
         setTimeout(() => {
           this.alert = false

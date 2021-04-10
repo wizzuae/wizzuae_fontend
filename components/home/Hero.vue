@@ -7,6 +7,7 @@
         <div
           class="grid px-6 xl:px-0 lg:grid-cols-2 py-12 max-w-screen-xl min-h-lg h-full mx-auto"
         >
+          <!-- Hero Text -->
           <div class="lg:my-auto text-left">
             <h1
               class="text-3xl lg:text-6xl white font-bold mb-3 md:mb-8 bg-primary text-transparent bg-clip-text uppercase"
@@ -29,6 +30,10 @@
               </router-link>
             </div>
           </div>
+          <!-- Form Start -->
+          <div>
+            <free-consultation></free-consultation>
+          </div>
         </div>
       </div>
       <div
@@ -50,9 +55,11 @@
 </template>
 
 <script>
+import FreeConsultation from '../forms/FreeConsultation.vue'
 // import FadeTransition from '~/components/transitions/FadeTransition.vue'
 
 export default {
+  components: { FreeConsultation },
   name: 'Hero',
   // components: {
   //   FadeTransition,

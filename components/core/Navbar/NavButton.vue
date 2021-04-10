@@ -19,12 +19,12 @@
     </NuxtLink>
     <ul
       v-if="data.sub"
-      class="bg-primary border text-secondary divide-y divide-secondary rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32"
+      class="bg-primary border w-45 text-secondary divide-y divide-secondary rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32"
     >
       <li
         v-for="(item, i) in data.sub"
         :key="i"
-        class="rounded-sm relative px-3 py-1 hover:bg-blue-900"
+        class="rounded-sm relative px-3 py-1 hover:bg-primary"
       >
         <a
           :href="data.subFolder ? data.subFolder + item.slug : item.slug"
@@ -50,7 +50,7 @@
           <li
             v-for="(subItem, i) in item.sub"
             :key="i"
-            class="rounded-sm relative px-3 py-1 hover:hover:bg-blue-900"
+            class="rounded-sm relative px-3 py-1 hover:hover:bg-primary"
           >
             <NuxtLink
               :to="
@@ -78,7 +78,7 @@
               <li
                 v-for="(deepItem, i) in subItem.sub"
                 :key="i"
-                class="px-3 py-1 hover:bg-blue-900"
+                class="px-3 py-1 hover:bg-primary"
               >
                 <NuxtLink :to="subItem.slug">
                   {{ deepItem.title }}
