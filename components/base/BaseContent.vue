@@ -23,7 +23,7 @@ export default {
   h4,
   h5,
   h6 {
-    @apply text-primary;
+    @apply bg-primary text-transparent bg-clip-text;
   }
 }
 </style>

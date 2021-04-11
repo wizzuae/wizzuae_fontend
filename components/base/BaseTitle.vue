@@ -2,7 +2,7 @@
   <div v-if="data">
     <h1
       v-if="data.title"
-      class="font-bold text-3xl md:text-5xl lg:text-6xl font-bold bg-primary text-transparent bg-clip-text"
+      class="text-3xl md:text-5xl lg:text-6xl font-bold bg-primary text-transparent bg-clip-text"
     >
       {{ data.title }}
     </h1>
