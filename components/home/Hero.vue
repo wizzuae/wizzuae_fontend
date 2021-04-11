@@ -1,11 +1,9 @@
 <template>
   <div>
     <header class="relative flex h-screen overflow-hidden">
-      <div
-        class="relative z-30 w-auto min-w-full min-h-full max-w-none video-top-layer"
-      >
+      <div class="z-30 w-auto min-w-full min-h-full max-w-none video-top-layer">
         <div
-          class="grid px-6 xl:px-0 lg:grid-cols-2 py-12 max-w-screen-xl min-h-lg h-full mx-auto"
+          class="relative grid px-6 xl:px-0 lg:grid-cols-2 py-12 max-w-screen-xl min-h-lg h-full mx-auto"
         >
           <!-- Hero Text -->
           <div class="lg:my-auto text-left">
@@ -31,9 +29,17 @@
             </div>
           </div>
           <!-- Form Start -->
-          <div>
-            <free-consultation></free-consultation>
-          </div>
+          <transition name="slide-fade">
+            <div v-if="consultation">
+              <free-consultation></free-consultation>
+            </div>
+          </transition>
+          <button
+            @click="consultation = !consultation"
+            class="hidden lg:flex absolute ring-3 ring-white self-center top-0 right-0 transform bg-primary py-3 px-5 text-white text-xl rounded-b-2xl"
+          >
+            Get a Free Consultation
+          </button>
         </div>
       </div>
       <div
@@ -73,6 +79,7 @@ export default {
     return {
       timer: null,
       currentIndex: 0,
+      consultation: false,
     }
   },
 
@@ -108,5 +115,16 @@ export default {
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0) 80%
   );
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .menu-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(50px);
+  opacity: 0;
 }
 </style>

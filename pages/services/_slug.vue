@@ -2,7 +2,11 @@
   <div>
     <BaseHeader v-if="header" :data="header" />
     <div class="md:py-12 max-w-screen-lg min-h-lg h-full mx-auto">
-      <base-content v-if="content" :data="content"></base-content>
+      <base-content
+        class="px-6 xl:px-0"
+        v-if="content"
+        :data="content"
+      ></base-content>
       <base-contents :data="contents"></base-contents>
     </div>
   </div>
