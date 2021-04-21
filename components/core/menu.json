@@ -51,6 +51,10 @@
         "slug": "/about-us"
     },
     {
+        "title": "Blogs",
+        "slug": "/blogs"
+    },
+    {
         "title": "Careers",
         "slug": "/careers"
     },

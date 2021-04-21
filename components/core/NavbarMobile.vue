@@ -37,6 +37,7 @@
           <button class="py-2" @click="$router.replace('/about-us')">
             About us
           </button>
+          <button class="py-2" @click="$router.replace('/blogs')">Blogs</button>
           <button class="py-2" @click="$router.replace('/careers')">
             Careers
           </button>
