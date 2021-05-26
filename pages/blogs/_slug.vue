@@ -40,6 +40,8 @@ export default {
     const content = data.content
     const contents = data.contents
 
+    // Meta Method 1
+
     // const metadata = data.metadata
     // let i = 0
     // let len = metadata.length
@@ -52,15 +54,63 @@ export default {
     //     content: metadata[i].meta_id.content,
     //   })
     // }
-    return { header, content, contents }
-    // return { header, meta, content, contents }
+
+    // Meta Method 2
+    let meta = [
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: data.title,
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: data.description,
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: data.image.s3_url + data.image.filename_disk,
+      },
+      {
+        hid: 'twitter:image:alt',
+        name: 'twitter:image:alt',
+        content: data.title,
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: data.title,
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: data.description,
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: data.image.s3_url + data.image.filename_disk,
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: data.image.s3_url + data.image.filename_disk,
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: data.title,
+      },
+    ]
+    return { header, meta, content, contents }
   },
-  // head() {
-  //   return {
-  //     title: this.header.title,
-  //     meta: this.meta,
-  //   }
-  // },
+  head() {
+    return {
+      title: this.header.title,
+      meta: this.meta,
+    }
+  },
 }
 </script>
 

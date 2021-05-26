@@ -11,9 +11,74 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.' },
       { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.' },
-      { hid: 'og:title', name: 'og:title', content: 'Wizz - Your business begins here !' },
-      { hid: 'og:site_name', name: 'og:site_name', content: 'Wizz - Your business begins here !' },
-      { hid: 'og:description', name: 'og:description', content: 'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.' },
+
+      // Twitter
+      // Test on: https://cards-dev.twitter.com/validator
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@wizzuae' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://www.wizzuae.ae'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Wizz - Your business begins here !'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://www.wizzuae.ae/icon.png'
+      },
+
+      // Open Graph
+      // Test on: https://developers.facebook.com/tools/debug/
+
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Wizz' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.wizzuae.ae'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Wizz - Your business begins here !'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.wizzuae.ae/icon.png'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://www.wizzuae.ae/icon.png'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Wizz'
+      }
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
