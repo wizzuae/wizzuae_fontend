@@ -121,7 +121,6 @@ export default {
   robots: {
     Sitemap: 'https://www.wizzuae.ae/sitemap.xml',
     UserAgent: '*',
-    Disallow: null
   },
   facebook: {
     /* module options */
