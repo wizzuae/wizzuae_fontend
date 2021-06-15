@@ -4,13 +4,13 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ' + 'Wizz - Your business begins here !',
+    titleTemplate: '%s - ' + 'Leading business setup and company formation service provider in the UAE',
     title: 'Wizz' || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.' },
-      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.' },
+      { hid: 'description', name: 'description', content: 'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.' },
+      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.' },
 
       // Twitter
       // Test on: https://cards-dev.twitter.com/validator
@@ -28,13 +28,13 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Wizz - Your business begins here !'
+        content: 'Wizz - Leading business setup and company formation service provider in the UAE'
       },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
         content:
-          'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.'
+          'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.'
       },
       {
         hid: 'twitter:image',
@@ -55,13 +55,13 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Wizz - Your business begins here !'
+        content: 'Wizz - Leading business setup and company formation service provider in the UAE'
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Our constant commitment is to pursue excellence in providing quality solutions that prepare your business for the future through sustained and long-term engagement.'
+          'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.'
       },
       {
         hid: 'og:image',
