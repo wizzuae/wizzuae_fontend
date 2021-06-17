@@ -3,7 +3,7 @@
     <transition name="service-fade">
       <div
         v-if="service"
-        class="bg-primary rounded-md text-secondary py-2 w-50 m-auto"
+        class="bg-neutral rounded-md text-primary py-2 w-50 m-auto"
       >
         <nav
           class="flex capitalize flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
@@ -24,7 +24,7 @@
     <transition name="menu-fade">
       <div
         v-if="menu"
-        class="bg-primary rounded-md text-secondary py-2 font-bold w-50 m-auto"
+        class="bg-neutral rounded-md text-primary py-2 font-bold w-50 m-auto"
       >
         <div
           class="flex flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
@@ -49,9 +49,9 @@
     </transition>
     <button
       @click="onClickMenu"
-      class="z-10 bg-primary spring ring-5 ring-brandBlue ring-opacity-30 rounded-full w-10 h-10 md:w-14 md:h-14 m-auto shadow-xl"
+      class="z-10 outline-none hover:(ring-10 outline-none) bg-neutral spring ring-5 ring-opacity-30 rounded-full w-10 h-10 md:w-14 md:h-14 m-auto shadow-xl"
     >
-      <span class="text-xs md:text-sm rotate m-auto text-neutral">Menu</span>
+      <span class="text-xs md:text-sm rotate m-auto text-primary">Menu</span>
     </button>
   </div>
 </template>
@@ -113,6 +113,10 @@ export default {
 </script>
 
 <style scoped>
+:focus {
+  outline: none;
+  @apply shadow-inner;
+}
 .spring {
   animation: spring 6s ease-in-out infinite;
 }

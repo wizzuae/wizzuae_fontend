@@ -24,13 +24,13 @@
           </p>
           <a
             href="#_"
-            class="flex items-center justify-center px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md shadow hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10"
+            class="flex items-center justify-center px-8 py-3 text-base font-medium leading-6 text-neutral transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md shadow hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10"
             >View Case Studies</a
           >
         </div>
         <div class="w-full lg:w-1/2">
           <blockquote
-            class="flex items-center justify-between w-full col-span-1 p-6 bg-white rounded-lg shadow"
+            class="flex items-center justify-between w-full col-span-1 p-6 bg-neutral rounded-lg shadow"
           >
             <div class="flex flex-col pr-8">
               <div class="relative pl-12">
@@ -67,7 +67,7 @@
             />
           </blockquote>
           <blockquote
-            class="flex items-center justify-between w-full col-span-1 p-6 mt-4 bg-white rounded-lg shadow"
+            class="flex items-center justify-between w-full col-span-1 p-6 mt-4 bg-neutral rounded-lg shadow"
           >
             <div class="flex flex-col pr-10">
               <div class="relative pl-12">
@@ -104,7 +104,7 @@
             />
           </blockquote>
           <blockquote
-            class="flex items-center justify-between w-full col-span-1 p-6 mt-4 bg-white rounded-lg shadow"
+            class="flex items-center justify-between w-full col-span-1 p-6 mt-4 bg-neutral rounded-lg shadow"
           >
             <div class="flex flex-col pr-10">
               <div class="relative pl-12">
@@ -151,5 +151,4 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

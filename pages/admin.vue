@@ -1,6 +1,6 @@
 <template>
   <div class="flex md:h-screen text-center content-center">
-    <div class="bg-red-300 mx-auto my-auto">
+    <div class="p-7 mx-auto my-auto">
       <a href="https://wizz-api.herokuapp.com/"
         ><button class="p-3 bg-primary text-neutral">
           Access to Administrator
@@ -14,5 +14,4 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

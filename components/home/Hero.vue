@@ -3,25 +3,54 @@
     <header class="relative flex h-screen overflow-hidden">
       <div class="z-30 w-auto min-w-full min-h-full max-w-none video-top-layer">
         <div
-          class="relative grid px-6 xl:px-0 lg:grid-cols-2 py-12 max-w-screen-xl min-h-lg h-full mx-auto"
+          class="
+            relative
+            grid
+            px-6
+            xl:px-0
+            lg:grid-cols-2
+            py-12
+            max-w-screen-xl
+            min-h-lg
+            h-full
+            mx-auto
+          "
         >
           <!-- Hero Text -->
           <div class="lg:my-auto text-left">
             <h1
-              class="text-3xl lg:text-6xl white font-bold mb-3 md:mb-8 bg-primary text-transparent bg-clip-text uppercase"
+              class="
+                text-3xl
+                lg:text-6xl
+                font-bold
+                mb-3
+                md:mb-8
+                bg-neutral
+                text-transparent
+                bg-clip-text
+                uppercase
+              "
             >
               {{ currentSlider.title }}
             </h1>
-            <p
-              class="tracking-widest font-medium text-cool-gray-800 opacity-90 text-xl"
-            >
+            <p class="tracking-widest text-neutral opacity-90 text-3xl">
               {{ currentSlider.description }}
             </p>
 
             <div class="mt-6">
               <router-link :to="currentSlider.link.url">
                 <button
-                  class="rounded text-neutral font-medium ring-2 ring-teal-500 bg-primary shadow-2xl hover:shadow-3xl hover:ring-3 py-3 px-3"
+                  class="
+                    rounded
+                    text-neutral
+                    font-medium
+                    ring-1 ring-secondary
+                    bg-primary
+                    shadow-2xl
+                    hover:shadow-3xl hover:ring-3
+                    py-3
+                    px-3
+                  "
                 >
                   {{ currentSlider.link.title }}
                 </button>
@@ -36,19 +65,47 @@
           </transition>
           <button
             @click="consultation = !consultation"
-            class="hidden lg:flex absolute ring-3 ring-white self-center top-0 right-0 transform bg-primary py-3 px-5 text-white text-xl rounded-b-2xl"
+            class="
+              hidden
+              lg:flex
+              absolute
+              ring-3 ring-neutral
+              self-center
+              top-0
+              right-0
+              transform
+              bg-primary
+              py-3
+              px-5
+              text-neutral text-xl
+              rounded-b-2xl
+            "
           >
             Get a Free Consultation
           </button>
         </div>
       </div>
       <div
-        class="absolute z-10 w-auto min-w-full min-h-full max-w-none shadow-inner shadow-2xl"
+        class="
+          absolute
+          z-10
+          w-auto
+          min-w-full min-h-full
+          max-w-none
+          shadow-inner shadow-2xl
+        "
       >
         <!-- <fade-transition mode="out-in"> -->
         <div v-for="(item, i) in data" :key="i">
           <img
-            class="w-auto lg:w-full transition duration-500 h-screen ease-in-out"
+            class="
+              w-auto
+              lg:w-full
+              transition
+              duration-500
+              h-screen
+              ease-in-out
+            "
             :src="
               currentSlider.image.s3_url + currentSlider.image.filename_disk
             "
@@ -68,7 +125,8 @@ export default {
   components: { FreeConsultation },
   name: 'Hero',
   // components: {
-  //   FadeTransition,
+  // Flicking,
+  // FadeTransition,
   // },
   props: {
     data: {
@@ -88,6 +146,10 @@ export default {
   },
 
   methods: {
+    onMoveEnd() {
+      alert('ss')
+      this.$refs.flicking.next()
+    },
     startSlide: function () {
       this.timer = setInterval(this.next, 5000)
     },
@@ -108,11 +170,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .video-top-layer {
   background-image: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.9),
+    #62c2ff,
     rgba(255, 255, 255, 0) 80%
   );
 }

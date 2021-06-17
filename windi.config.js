@@ -1,20 +1,22 @@
 
+import { defineConfig } from 'windicss/helpers'
 const colors = require('windicss/colors')
 const typography = require('windicss/plugin/typography')
 const aspect_ratio = require('windicss/plugin/aspect-ratio')
 
-module.exports = {
+export default defineConfig({
     darkMode: 'class',
     plugins: [typography, aspect_ratio],
     theme: {
         extend: {
             colors: {
-                primary: "#002960",
-                secondary: "#EFF6FF",
+                primary: "#0074D9",
+                secondary: "#E5E7EB",
                 neutral: "#FAFAFA",
+                brandBlack: ""
             },
             backgroundImage: {
-                primary: 'radial-gradient(at 50% 100%,  #002960, #002960)',
+                primary: 'radial-gradient(at 50% 100%,  #1CA7EC, #0074D9)',
                 // primary: 'radial-gradient(at 50% 100%,  rgba(8, 145, 178, 0.75), rgba(15, 1, 94, 1))',
                 // primary: 'radial-gradient(circle farthest-corner at 10% 20%, rgba(31, 31, 112, 1) , rgba(105, 105, 236, 1)  )',
                 // primary: 'radial-gradient(at 100% 10%, rgba(123, 22, 255, 0.75),rgb(15, 1, 94))',
@@ -22,5 +24,11 @@ module.exports = {
                 // primary: 'linear-gradient(to right, #1e3a8a, #0891B2 70%, #1e3a8a )',
             },
         }
-    }
-}
+    },
+    extract: {
+        include: [
+            '*/**/*.{vue,jsx,tsx,svelte}',
+            'shared/**/*.{vue,ts}',
+        ]
+    },
+})

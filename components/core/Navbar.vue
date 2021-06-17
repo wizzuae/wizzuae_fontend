@@ -2,7 +2,7 @@
   <div>
     <div
       v-if="menu"
-      class="bg-primary rounded-md text-secondary py-2 font-bold w-50 m-auto"
+      class="bg-neutral rounded-md text-primary py-2 font-bold w-50 m-auto"
     >
       <nav
         class="flex flex-col text-xl text-center divide-y-1 px-3 align-middle divide-secondary"

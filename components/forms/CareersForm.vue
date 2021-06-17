@@ -59,7 +59,7 @@
       </div>
       <div class="flex gap-4 justify-end">
         <input
-          class="py-3 w-24 bg-white text-primary rounded-sm"
+          class="py-3 w-24 bg-neutral text-primary rounded-sm"
           type="reset"
           name="reset"
           value="Clear"
@@ -114,5 +114,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

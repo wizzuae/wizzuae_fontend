@@ -3,7 +3,7 @@
     class="flex h-full w-full xl:justify-center hidden lg:flex ml-10 relative"
   >
     <div
-      class="lg:max-w-2/3 self-center place-self-center xl:max-w-1/2 bg-white bg-opacity-90 px-6 pt-6 rounded-2xl"
+      class="lg:max-w-2/3 self-center place-self-center xl:max-w-1/2 bg-neutral bg-opacity-90 px-6 pt-6 rounded-2xl"
     >
       <header>
         <h1 class="text-xl font-bold text-primary">Get a Free Consultation</h1>
@@ -15,7 +15,7 @@
           <input
             required
             type="text"
-            class="px-4 py-2 border bg-white bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+            class="px-4 py-2 border bg-neutral bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
             placeholder="Your name"
             name="name"
             v-model="full_name"
@@ -25,7 +25,7 @@
             type="mobile"
             name="mobile"
             v-model="mobile"
-            class="px-4 py-2 border bg-white bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+            class="px-4 py-2 border bg-neutral bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
             placeholder="Mobile"
           />
           <input
@@ -33,20 +33,20 @@
             type="email"
             name="email"
             v-model="email"
-            class="px-4 py-2 border bg-white bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+            class="px-4 py-2 border bg-neutral bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
             placeholder="Email"
           />
           <textarea
             type="text"
             name="message"
             v-model="message"
-            class="px-4 py-2 border bg-white bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+            class="px-4 py-2 border bg-neutral bg-opacity-90 focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
             placeholder="Your Message (optional)"
           ></textarea>
           <button
             v-if="!loading"
             type="submit"
-            class="bg-primary transform hover:(shadow-lg ring-1 ring-blue-500) flex justify-center items-center w-full text-gray-100 px-4 py-3 rounded-md focus:outline-none"
+            class="bg-primary transform hover:(shadow-lg ring-1 ring-secondary) flex justify-center items-center w-full text-gray-100 px-4 py-3 rounded-md focus:outline-none"
           >
             <span v-if="alert">Thank you</span>
             <span v-else> Submit </span>
@@ -137,5 +137,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

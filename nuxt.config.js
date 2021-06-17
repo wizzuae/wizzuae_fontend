@@ -9,8 +9,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.' },
-      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.' },
+      { hid: 'description', name: 'description', content: 'Start business in UAE with premium business setup services. WIZZ offers best company formation, Mainland/Freezone license, visa processing, and PRO packages' },
+      { hid: 'apple-mobile-web-app-title', name: 'apple-mobile-web-app-title', content: 'Start business in UAE with premium business setup services. WIZZ offers best company formation, Mainland/Freezone license, visa processing, and PRO packages' },
 
       // Twitter
       // Test on: https://cards-dev.twitter.com/validator
@@ -34,7 +34,7 @@ export default {
         hid: 'twitter:description',
         name: 'twitter:description',
         content:
-          'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.'
+          'Start business in UAE with premium business setup services. WIZZ offers best company formation, Mainland/Freezone license, visa processing, and PRO packages'
       },
       {
         hid: 'twitter:image',
@@ -61,7 +61,7 @@ export default {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Start your business in the UAE with premium business setup and company formation services. WIZZ is leading company formation, licensing, visa processing, and PRO service provider in the UAE.'
+          'Start business in UAE with premium business setup services. WIZZ offers best company formation, Mainland/Freezone license, visa processing, and PRO packages'
       },
       {
         hid: 'og:image',
@@ -95,7 +95,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["~/assets/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/vue-gtag', }],
@@ -106,8 +106,12 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    // 'nuxt-vite',
-    'nuxt-windicss'
+    'nuxt-vite',
+    'nuxt-windicss',
+    // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
+    '@nuxtjs/composition-api/module',
+    'pinia/nuxt',
+    ['pinia/nuxt', { disableVuex: true }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

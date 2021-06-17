@@ -1,7 +1,16 @@
 <template>
   <div class="bg-primary py-24">
     <div
-      class="grid lg:grid-cols-2 gap-6 max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto"
+      class="
+        grid
+        lg:grid-cols-2
+        gap-6
+        max-w-screen-xl
+        px-6
+        xl:px-0
+        min-h-lg
+        mx-auto
+      "
     >
       <div class="lg:my-auto text-left">
         <div v-for="(items, i) in data" :key="i">
@@ -27,7 +36,17 @@
               >
                 <NuxtLink
                   :to="links_id.url"
-                  class="text-left flex rounded shadow-md hover:shadow-xl py-3 px-3 border border-secondary border-opacity-50 hover:border-opacity-100"
+                  class="
+                    text-left
+                    flex
+                    rounded
+                    shadow-md
+                    hover:shadow-xl
+                    py-3
+                    px-3
+                    border border-secondary border-opacity-50
+                    hover:border-opacity-100
+                  "
                 >
                   <span class="pr-1 flex-1">{{ links_id.title }}</span>
                   <span class="mr-auto my-auto">
@@ -93,5 +112,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

@@ -47,7 +47,7 @@
 
             <div class="relative sm:max-w-xl sm:mx-auto">
               <div
-                class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10"
+                class="relative px-4 py-10 bg-neutral mx-8 md:mx-0 shadow rounded-3xl sm:p-10"
               >
                 <div class="max-w-md mx-auto">
                   <!-- Form Header -->
@@ -211,11 +211,11 @@
                   </form>
                   <div class="text-center py-4 lg:px-4" v-if="alert">
                     <div
-                      class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+                      class="p-2 bg-primary items-center text-neutral leading-none lg:rounded-full flex lg:inline-flex"
                       role="alert"
                     >
                       <span
-                        class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3"
+                        class="flex rounded-full bg-secondary text-primary uppercase px-2 py-1 text-xs font-bold mr-3"
                         >New</span
                       >
                       <span class="font-semibold mr-2 text-left flex-auto"
@@ -241,7 +241,7 @@ export default {
     design: {
       type: String,
       default:
-        'px-2 h-7 flex items-center my-1 rounded-sm bg-primary text-secondary',
+        'px-3 h-8 flex items-center my-1 rounded-lg bg-primary text-secondary',
     },
     title: {
       type: String,
@@ -293,5 +293,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

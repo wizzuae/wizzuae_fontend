@@ -12,10 +12,10 @@
         r="125.04"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#f1eda6" />
-        <stop offset="0.26" stop-color="#ded493" />
-        <stop offset="0.8" stop-color="#ad9363" />
-        <stop offset="1" stop-color="#9a7950" />
+        <stop offset="0" stop-color="#0074D9" />
+        <stop offset="0.26" stop-color="#1CA7EC" />
+        <stop offset="0.8" stop-color="#0074D9" />
+        <stop offset="1" stop-color="#1CA7EC" />
       </radialGradient>
       <radialGradient id="b" cx="243" cy="375.45" r="180.28" xlink:href="#a" />
       <radialGradient

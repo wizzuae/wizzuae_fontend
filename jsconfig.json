@@ -8,5 +8,6 @@
       "@@/*": ["./*"]
     }
   },
+  "types": ["pinia/nuxt/types"],
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

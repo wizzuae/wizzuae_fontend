@@ -31,6 +31,7 @@ import QuickGuide from '~/components/home/QuickGuide.vue'
 import WhyChooseUs from '~/components/home/WhyChooseUs.vue'
 import HowToGetStarted from '~/components/home/HowToGetStarted.vue'
 import JoinOurTeam from '~/components/home/JoinOurTeam.vue'
+import { useGlobalStore } from '~/store'
 export default {
   components: {
     Hero,
@@ -41,7 +42,8 @@ export default {
     JoinOurTeam,
   },
   name: 'home',
-  async asyncData({ $axios }) {
+  async asyncData({ $axios, pinia }) {
+    const global = useGlobalStore(pinia)
     const data = await $axios.$get('/home', {
       params: {
         fields: [
@@ -97,7 +99,7 @@ export default {
 
     const components = data.data.components
     const hero = data.data.hero
-    return { hero, components, meta }
+    return { hero, components, meta, global }
   },
   head() {
     return {

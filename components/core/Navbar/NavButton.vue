@@ -2,9 +2,9 @@
   <div class="group inline-block">
     <NuxtLink
       :to="data.slug"
-      class="outline-none focus:outline-none text-xl text-secondary hover:text-white py-1 rounded-sm flex items-center"
+      class="hover:(text-opacity-75) text-lg text-primary py-1 rounded-sm flex items-center"
     >
-      <span class="pr-1 font-semibold flex-1">{{ data.title }}</span>
+      <span class="font-semibold flex-1">{{ data.title }}</span>
       <span v-if="data.sub">
         <svg
           class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out"
@@ -19,12 +19,12 @@
     </NuxtLink>
     <ul
       v-if="data.sub"
-      class="bg-primary border w-45 text-secondary divide-y divide-secondary rounded-sm transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32"
+      class="bg-neutral bg-opacity-98 blur-2xl border w-50 px-3 py-2 text-primary divide-y divide-secondary rounded-md transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32"
     >
       <li
         v-for="(item, i) in data.sub"
         :key="i"
-        class="rounded-sm relative px-3 py-1 hover:bg-primary"
+        class="rounded-md relative px-3 py-1 hover:bg-secondary"
       >
         <a
           :href="data.subFolder ? data.subFolder + item.slug : item.slug"

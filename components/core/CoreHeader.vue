@@ -1,6 +1,8 @@
 <template>
   <div class="relative z-50">
-    <div class="bg-secondary max-w-screen h-9 hidden lg:block">
+    <div
+      class="bg-neutral max-w-screen h-10 border-b-2 border-secondary hidden lg:block"
+    >
       <div
         class="flex gap-6 items-center text-primary justify-end max-w-screen-xl px-6 xl:px-0 mx-auto"
       >
@@ -62,20 +64,20 @@
         <appointment></appointment>
       </div>
     </div>
-    <div class="py-3 bg-primary shadow-xl max-w-screen">
+    <div class="py-3 bg-neutral shadow-xl max-w-screen">
       <div
         class="max-w-screen-xl px-6 xl:px-0 items-center flex justify-between mx-auto"
       >
-        <Logo class="w-16 md:w-20 lg:w-32" />
+        <Logo class="w-16 md:w-20 lg:w-28" />
         <DesktopNavBar class="hidden lg:block" />
         <div class="lg:hidden">
           <a
-            class="flex gap-2 text-neutral opacity-80"
+            class="flex gap-2 text-primary opacity-100"
             type="button"
             href="tel:+971 58 555 0070"
           >
             <span
-              class="rounded-full absolute border-3 bg-blue-400 animate-ping"
+              class="rounded-full absolute border-3 bg-blue-500 animate-ping"
             ></span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -111,8 +113,7 @@ export default {
     Logo,
   },
 }
-</script>,
-    
+</script>
+,
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
