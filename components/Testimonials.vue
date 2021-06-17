@@ -6,15 +6,41 @@
     <div class="max-w-6xl px-12 mx-auto bg-gray-100 md:px-16 xl:px-10">
       <div class="flex flex-col items-center lg:flex-row">
         <div
-          class="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 lg:mb-0 lg:w-1/2"
+          class="
+            flex flex-col
+            items-start
+            justify-center
+            w-full
+            h-full
+            pr-8
+            mb-10
+            lg:mb-0 lg:w-1/2
+          "
         >
           <p
-            class="mb-2 text-base font-medium tracking-tight text-indigo-500 uppercase"
+            class="
+              mb-2
+              text-base
+              font-medium
+              tracking-tight
+              text-indigo-500
+              uppercase
+            "
           >
             Our customers love our service
           </p>
           <h2
-            class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
+            class="
+              text-4xl
+              font-extrabold
+              leading-10
+              tracking-tight
+              text-gray-900
+              sm:text-5xl sm:leading-none
+              md:text-6xl
+              lg:text-5xl
+              xl:text-6xl
+            "
           >
             Testimonials
           </h2>
@@ -24,13 +50,45 @@
           </p>
           <a
             href="#_"
-            class="flex items-center justify-center px-8 py-3 text-base font-medium leading-6 text-neutral transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md shadow hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10"
+            class="
+              flex
+              items-center
+              justify-center
+              px-8
+              py-3
+              text-base
+              font-medium
+              leading-6
+              text-neutral
+              transition
+              duration-150
+              ease-in-out
+              bg-indigo-600
+              border border-transparent
+              rounded-md
+              shadow
+              hover:bg-indigo-500
+              focus:outline-none
+              focus:border-indigo-700
+              focus:shadow-outline-indigo
+              md:py-4 md:text-lg md:px-10
+            "
             >View Case Studies</a
           >
         </div>
         <div class="w-full lg:w-1/2">
           <blockquote
-            class="flex items-center justify-between w-full col-span-1 p-6 bg-neutral rounded-lg shadow"
+            class="
+              flex
+              items-center
+              justify-between
+              w-full
+              col-span-1
+              p-6
+              bg-neutral
+              rounded-lg
+              shadow
+            "
           >
             <div class="flex flex-col pr-8">
               <div class="relative pl-12">
@@ -44,7 +102,13 @@
                   ></path>
                 </svg>
                 <p
-                  class="mt-2 text-sm text-gray-600 sm:text-base lg:text-sm xl:text-base"
+                  class="
+                    mt-2
+                    text-sm text-gray-600
+                    sm:text-base
+                    lg:text-sm
+                    xl:text-base
+                  "
                 >
                   Awesome product! And the customer service is exceptionally
                   well.
@@ -52,7 +116,17 @@
               </div>
 
               <h3
-                class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base"
+                class="
+                  pl-12
+                  mt-3
+                  text-sm
+                  font-medium
+                  leading-5
+                  text-gray-800
+                  truncate
+                  sm:text-base
+                  lg:text-sm lg:text-base
+                "
               >
                 Jane Cooper
                 <span class="mt-1 text-sm leading-5 text-gray-500 truncate"
@@ -61,13 +135,31 @@
               </h3>
             </div>
             <img
-              class="flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24"
+              class="
+                flex-shrink-0
+                w-20
+                h-20
+                bg-gray-300
+                rounded-full
+                xl:w-24 xl:h-24
+              "
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
               alt=""
             />
           </blockquote>
           <blockquote
-            class="flex items-center justify-between w-full col-span-1 p-6 mt-4 bg-neutral rounded-lg shadow"
+            class="
+              flex
+              items-center
+              justify-between
+              w-full
+              col-span-1
+              p-6
+              mt-4
+              bg-neutral
+              rounded-lg
+              shadow
+            "
           >
             <div class="flex flex-col pr-10">
               <div class="relative pl-12">
@@ -81,14 +173,30 @@
                   ></path>
                 </svg>
                 <p
-                  class="mt-2 text-sm text-gray-600 sm:text-base lg:text-sm xl:text-base"
+                  class="
+                    mt-2
+                    text-sm text-gray-600
+                    sm:text-base
+                    lg:text-sm
+                    xl:text-base
+                  "
                 >
                   I can't express enough, how amazing this service has been for
                   my company.
                 </p>
               </div>
               <h3
-                class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base"
+                class="
+                  pl-12
+                  mt-3
+                  text-sm
+                  font-medium
+                  leading-5
+                  text-gray-800
+                  truncate
+                  sm:text-base
+                  lg:text-sm lg:text-base
+                "
               >
                 John Doe
                 <span class="mt-1 text-sm leading-5 text-gray-500 truncate"
@@ -104,7 +212,18 @@
             />
           </blockquote>
           <blockquote
-            class="flex items-center justify-between w-full col-span-1 p-6 mt-4 bg-neutral rounded-lg shadow"
+            class="
+              flex
+              items-center
+              justify-between
+              w-full
+              col-span-1
+              p-6
+              mt-4
+              bg-neutral
+              rounded-lg
+              shadow
+            "
           >
             <div class="flex flex-col pr-10">
               <div class="relative pl-12">
@@ -118,7 +237,13 @@
                   ></path>
                 </svg>
                 <p
-                  class="mt-2 text-sm text-gray-600 sm:text-base lg:text-sm xl:text-base"
+                  class="
+                    mt-2
+                    text-sm text-gray-600
+                    sm:text-base
+                    lg:text-sm
+                    xl:text-base
+                  "
                 >
                   I can't express enough, how amazing this service has been for
                   my company.
@@ -126,7 +251,17 @@
               </div>
 
               <h3
-                class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base"
+                class="
+                  pl-12
+                  mt-3
+                  text-sm
+                  font-medium
+                  leading-5
+                  text-gray-800
+                  truncate
+                  sm:text-base
+                  lg:text-sm lg:text-base
+                "
               >
                 John Smith
                 <span class="mt-1 text-sm leading-5 text-gray-500 truncate"

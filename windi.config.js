@@ -1,10 +1,10 @@
 
-import { defineConfig } from 'windicss/helpers'
+// import { defineConfig } from 'windicss/helpers'
 const colors = require('windicss/colors')
 const typography = require('windicss/plugin/typography')
 const aspect_ratio = require('windicss/plugin/aspect-ratio')
 
-export default defineConfig({
+module.exports = {
     darkMode: 'class',
     plugins: [typography, aspect_ratio],
     theme: {
@@ -31,4 +31,4 @@ export default defineConfig({
             'shared/**/*.{vue,ts}',
         ]
     },
-})
+}
