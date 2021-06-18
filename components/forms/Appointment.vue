@@ -5,7 +5,17 @@
       <!-- This example requires Tailwind CSS v2.0+ -->
       <div class="fixed z-10 inset-0 overflow-y-auto">
         <div
-          class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+          class="
+            flex
+            items-end
+            justify-center
+            min-h-screen
+            pt-4
+            px-4
+            pb-20
+            text-center
+            sm:block sm:p-0
+          "
         >
           <!--
       Background overlay, show/hide based on modal state.
@@ -38,7 +48,15 @@
         To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     -->
           <div
-            class="inline-block align-bottom overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+            class="
+              inline-block
+              align-bottom
+              overflow-hidden
+              shadow-xl
+              transform
+              transition-all
+              sm:my-8 sm:align-middle sm:max-w-lg sm:w-full
+            "
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-headline"
@@ -47,15 +65,29 @@
 
             <div class="relative sm:max-w-xl sm:mx-auto">
               <div
-                class="relative px-4 py-10 bg-neutral mx-8 md:mx-0 shadow rounded-3xl sm:p-10"
+                class="
+                  relative
+                  px-4
+                  py-10
+                  bg-neutral
+                  mx-8
+                  md:mx-0
+                  shadow
+                  rounded-3xl
+                  sm:p-10
+                "
               >
                 <div class="max-w-md mx-auto">
                   <!-- Form Header -->
                   <div class="items-center">
                     <div class="font-semibold text-xl text-gray-700">
-                      <h2 class="leading-relaxed">Create an Appointment</h2>
+                      <h2 class="leading-relaxed">Get a Free Consultation</h2>
                       <p
-                        class="text-sm text-gray-500 font-normal leading-relaxed"
+                        class="
+                          text-sm text-gray-500
+                          font-normal
+                          leading-relaxed
+                        "
                       >
                         Feel free to create a meeting at your chosen time
                       </p>
@@ -65,14 +97,32 @@
                   <form v-if="!alert" @submit.prevent="submitForm">
                     <div class="divide-y text-left divide-gray-200">
                       <div
-                        class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7"
+                        class="
+                          py-8
+                          text-base
+                          leading-6
+                          space-y-4
+                          text-gray-700
+                          sm:text-lg sm:leading-7
+                        "
                       >
                         <div class="flex flex-col">
                           <!-- <label class="leading-loose">Your Name</label> -->
                           <input
                             required
                             type="text"
-                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            class="
+                              px-4
+                              py-2
+                              border
+                              focus:ring-gray-500 focus:border-gray-900
+                              w-full
+                              sm:text-sm
+                              border-gray-300
+                              rounded-md
+                              focus:outline-none
+                              text-gray-600
+                            "
                             placeholder="Your name"
                             name="name"
                             v-model="full_name"
@@ -85,7 +135,18 @@
                             type="mobile"
                             name="mobile"
                             v-model="mobile"
-                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            class="
+                              px-4
+                              py-2
+                              border
+                              focus:ring-gray-500 focus:border-gray-900
+                              w-full
+                              sm:text-sm
+                              border-gray-300
+                              rounded-md
+                              focus:outline-none
+                              text-gray-600
+                            "
                             placeholder="Mobile"
                           />
                         </div>
@@ -96,7 +157,18 @@
                             type="email"
                             name="email"
                             v-model="email"
-                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            class="
+                              px-4
+                              py-2
+                              border
+                              focus:ring-gray-500 focus:border-gray-900
+                              w-full
+                              sm:text-sm
+                              border-gray-300
+                              rounded-md
+                              focus:outline-none
+                              text-gray-600
+                            "
                             placeholder="Email"
                           />
                         </div>
@@ -104,13 +176,29 @@
                           <div class="flex flex-col">
                             <label class="leading-loose">Date</label>
                             <div
-                              class="relative focus-within:text-gray-600 text-gray-400"
+                              class="
+                                relative
+                                focus-within:text-gray-600
+                                text-gray-400
+                              "
                             >
                               <input
                                 type="text"
                                 name="data"
                                 v-model="date"
-                                class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                                class="
+                                  pr-4
+                                  pl-10
+                                  py-2
+                                  border
+                                  focus:ring-gray-500 focus:border-gray-900
+                                  w-full
+                                  sm:text-sm
+                                  border-gray-300
+                                  rounded-md
+                                  focus:outline-none
+                                  text-gray-600
+                                "
                                 placeholder="25/02/2021"
                               />
                               <div class="absolute left-3 top-2">
@@ -134,13 +222,29 @@
                           <div class="flex flex-col">
                             <label class="leading-loose">Time</label>
                             <div
-                              class="relative focus-within:text-gray-600 text-gray-400"
+                              class="
+                                relative
+                                focus-within:text-gray-600
+                                text-gray-400
+                              "
                             >
                               <input
                                 type="text"
                                 name="time"
                                 v-model="time"
-                                class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                                class="
+                                  pr-4
+                                  pl-10
+                                  py-2
+                                  border
+                                  focus:ring-gray-500 focus:border-gray-900
+                                  w-full
+                                  sm:text-sm
+                                  border-gray-300
+                                  rounded-md
+                                  focus:outline-none
+                                  text-gray-600
+                                "
                                 placeholder="12:00 PM"
                               />
                               <div class="absolute left-3 top-2">
@@ -168,7 +272,18 @@
                             type="text"
                             name="message"
                             v-model="message"
-                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                            class="
+                              px-4
+                              py-2
+                              border
+                              focus:ring-gray-500 focus:border-gray-900
+                              w-full
+                              sm:text-sm
+                              border-gray-300
+                              rounded-md
+                              focus:outline-none
+                              text-gray-600
+                            "
                             placeholder="Your Message (optional)"
                           />
                         </div>
@@ -182,7 +297,17 @@
                       <div class="pt-4 flex items-center space-x-4">
                         <button
                           @click="model = false"
-                          class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none"
+                          class="
+                            flex
+                            justify-center
+                            items-center
+                            w-full
+                            text-gray-900
+                            px-4
+                            py-3
+                            rounded-md
+                            focus:outline-none
+                          "
                         >
                           <svg
                             class="w-6 h-6 mr-3"
@@ -202,20 +327,51 @@
                         </button>
                         <button
                           type="submit"
-                          class="bg-primary flex justify-center items-center w-full text-gray-100 px-4 py-3 rounded-md focus:outline-none"
+                          class="
+                            bg-primary
+                            flex
+                            justify-center
+                            items-center
+                            w-full
+                            text-gray-100
+                            px-4
+                            py-3
+                            rounded-md
+                            focus:outline-none
+                          "
                         >
-                          Create
+                          Send
                         </button>
                       </div>
                     </div>
                   </form>
                   <div class="text-center py-4 lg:px-4" v-if="alert">
                     <div
-                      class="p-2 bg-primary items-center text-neutral leading-none lg:rounded-full flex lg:inline-flex"
+                      class="
+                        p-2
+                        bg-primary
+                        items-center
+                        text-neutral
+                        leading-none
+                        lg:rounded-full
+                        flex
+                        lg:inline-flex
+                      "
                       role="alert"
                     >
                       <span
-                        class="flex rounded-full bg-secondary text-primary uppercase px-2 py-1 text-xs font-bold mr-3"
+                        class="
+                          flex
+                          rounded-full
+                          bg-secondary
+                          text-primary
+                          uppercase
+                          px-2
+                          py-1
+                          text-xs
+                          font-bold
+                          mr-3
+                        "
                         >New</span
                       >
                       <span class="font-semibold mr-2 text-left flex-auto"
@@ -245,7 +401,7 @@ export default {
     },
     title: {
       type: String,
-      default: 'Book Appointment',
+      default: 'Free Consultation',
     },
   },
   data() {
@@ -271,8 +427,8 @@ export default {
             Accept: 'application/json',
           },
           body: JSON.stringify({
-            _subject: this.full_name + ' created a new appointment',
-            _cc: 'saliha@wizzuae.ae,bhaktipatil@wizzuae.ae,team@visualout.com',
+            _subject: this.full_name + ' requested for a free consultation',
+            _cc: 'saliha@wizzuae.ae,bhaktipatil@wizzuae.ae',
             full_name: this.full_name,
             email: this.email,
             mobile: this.mobile,

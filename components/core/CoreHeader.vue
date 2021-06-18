@@ -1,12 +1,29 @@
 <template>
   <div class="relative z-50">
     <div
-      class="bg-neutral max-w-screen h-10 border-b-2 border-secondary hidden lg:block"
+      class="
+        bg-neutral
+        max-w-screen
+        h-10
+        border-b-2 border-secondary
+        hidden
+        lg:block
+      "
     >
       <div
-        class="flex gap-6 items-center text-primary justify-end max-w-screen-xl px-6 xl:px-0 mx-auto"
+        class="
+          flex
+          gap-6
+          items-center
+          text-primary
+          justify-end
+          max-w-screen-xl
+          px-6
+          xl:px-0
+          mx-auto
+        "
       >
-        <a href="https://goo.gl/maps/5LkGfVRQGzMf2A7y8" class="flex gap-2">
+        <!-- <a href="https://goo.gl/maps/5LkGfVRQGzMf2A7y8" class="flex gap-2">
           <svg
             class="h-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +45,7 @@
             />
           </svg>
           <span> #2307, Arenco Tower, Sheikh Zayed Road, Dubai, UAE</span>
-        </a>
+        </a> -->
         <a href="mailto:info@wizzuae.ae" class="flex gap-2">
           <svg
             class="h-6"
@@ -66,7 +83,15 @@
     </div>
     <div class="py-3 bg-neutral shadow-xl max-w-screen">
       <div
-        class="max-w-screen-xl px-6 xl:px-0 items-center flex justify-between mx-auto"
+        class="
+          max-w-screen-xl
+          px-6
+          xl:px-0
+          items-center
+          flex
+          justify-between
+          mx-auto
+        "
       >
         <Logo class="w-16 md:w-20 lg:w-28" />
         <DesktopNavBar class="hidden lg:block" />

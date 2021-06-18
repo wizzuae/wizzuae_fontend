@@ -113,6 +113,7 @@ export default {
     '@nuxtjs/composition-api/module',
     'pinia/nuxt',
     ['pinia/nuxt', { disableVuex: true }],
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
