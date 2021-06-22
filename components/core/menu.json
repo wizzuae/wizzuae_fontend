@@ -28,15 +28,19 @@
         "sub": [
             {
                 "title": "PRO & VISA Services",
-                "slug": "pro-and-visa-services"
+                "slug": "pro-and-visa-services-uae"
             },
             {
-                "title": "Local Sponsorship",
-                "slug": "local-sponsorship"
+                "title": "Local Sponsors",
+                "slug": "local-sponsors-uae"
             },
             {
-                "title": "Bank Account Assistance",
-                "slug": "bank-account-assistance"
+                "title": "Bank Account Opening",
+                "slug": "bank-account-opening-uae"
+            },
+            {
+                "title": "Trademark Services",
+                "slug": "trademark-registration-services-uae"
             },
             {
                 "title": "Financial Services",

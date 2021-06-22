@@ -61,9 +61,9 @@
                     "
                   >
                     <div class="grid grid-cols-1 text-primary">
-                      <div class="max-h-179px">
+                      <div class="max-h-179px rounded-xl overflow-hidden">
                         <nuxt-img
-                          class="rounded-xl"
+                          class="w-full"
                           :src="
                             cards_id.image.s3_url + cards_id.image.filename_disk
                           "

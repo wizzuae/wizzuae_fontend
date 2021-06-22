@@ -101,15 +101,19 @@
 const mobileServices = [
   {
     title: 'PRO & VISA Services',
-    slug: '/services/pro-and-visa-services',
+    slug: '/services/pro-and-visa-services-uae',
   },
   {
-    title: 'Local Sponsorship',
-    slug: '/services/local-sponsorship',
+    title: 'Local Sponsors',
+    slug: '/services/local-sponsors-uae',
   },
   {
-    title: 'Bank Account Assistance',
-    slug: '/services/bank-account-assistance',
+    title: 'Bank Account Opening',
+    slug: '/services/bank-account-opening-uae',
+  },
+  {
+    title: 'Trademark Services',
+    slug: '/services/trademark-registration-services-uae',
   },
   {
     title: 'Financial Services',
