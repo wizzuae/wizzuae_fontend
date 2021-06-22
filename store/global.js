@@ -6,17 +6,27 @@ export const useGlobalStore = defineStore({
     state() {
         return {
             // all these properties will have their type inferred automatically
-            counter: 0,
-            name: 'Eduardo',
-            isAdmin: true,
+            metadata: [
+
+            ]
         }
     },
-    // actions: {
-    //     purchase() {
-    //         const user = useUserStore()
-    //         if (!user.isAuthenticated()) {
-    //             this.$nuxt.redirect('/login')
-    //         }
-    //     },
-    // },
+    actions: {
+        setMetadata(data) {
+            let i = 0
+            let len = data.length
+            let meta = []
+
+            for (i; i < len; i++) {
+                meta.push({
+                    hid: data[i].meta_id.name,
+                    name: data[i].meta_id.name,
+                    content: data[i].meta_id.content,
+                })
+            }
+            this.metadata = meta
+            return this.metadata
+            // const result = data.Map()
+        },
+    },
 })

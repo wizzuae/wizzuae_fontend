@@ -17,7 +17,7 @@
           items-center
           text-primary
           justify-end
-          max-w-screen-xl
+          container
           px-6
           xl:px-0
           mx-auto
@@ -78,21 +78,17 @@
           </svg>
           <span>+971 58 555 0070</span>
         </a>
-        <appointment></appointment>
+        <appointment
+          v-motion
+          :initial="{ opacity: 0, y: 100 }"
+          :visible="{ opacity: 1, y: 0, scale: 1 }"
+          :hovered="{ scale: 1.1 }"
+          :delay="200"
+        ></appointment>
       </div>
     </div>
-    <div class="py-3 bg-neutral shadow-xl max-w-screen">
-      <div
-        class="
-          max-w-screen-xl
-          px-6
-          xl:px-0
-          items-center
-          flex
-          justify-between
-          mx-auto
-        "
-      >
+    <div class="py-3 max-w-screen bg-neutral shadow-xl">
+      <div class="container items-center flex justify-between">
         <Logo class="w-16 md:w-20 lg:w-28" />
         <DesktopNavBar class="hidden lg:block" />
         <div class="lg:hidden">

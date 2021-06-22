@@ -8,7 +8,16 @@
   >
     <div class="mask-layer flex h-full">
       <div
-        class="flex flex-col px-6 xl:px-0 text-left w-full text-neutral max-w-screen-lg md:mx-auto"
+        class="
+          flex flex-col
+          px-6
+          xl:px-0
+          text-left
+          w-full
+          text-neutral
+          max-w-screen-lg
+          md:mx-auto
+        "
       >
         <div class="my-auto">
           <h1
@@ -45,12 +54,8 @@ export default {
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .mask-layer {
-  background-image: linear-gradient(
-    to right,
-    rgb(15, 1, 94),
-    rgba(255, 0, 0, 0)
-  );
+  background-image: linear-gradient(to right, #0074d9, rgba(255, 0, 0, 0));
 }
 </style>

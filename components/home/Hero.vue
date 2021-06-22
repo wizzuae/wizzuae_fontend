@@ -1,93 +1,23 @@
 <template>
   <div>
     <header class="relative flex overflow-hidden">
-      <div>
-        <carousel
-          :paginationEnabled="true"
-          paginationPosition="bottom-overlay"
-          class="h-500px md:h-3/1 bg-blue-200"
-          :perPage="1"
-          :center-mode="true"
+      <carousel
+        loop
+        autoplay
+        :autoplayTimeout="4000"
+        paginationPosition="bottom-overlay"
+        class="w-full"
+        :perPage="1"
+        :center-mode="true"
+      >
+        <CarouselSlide
+          class="h-500px md:h-541px bg-cyan-500"
+          v-for="(slide, i) in data"
+          :key="i"
         >
-          <CarouselSlide
-            class="relative bg-yellow-200"
-            v-for="(slide, i) in data"
-            :key="i"
-          >
-            <div
-              class="
-                absolute
-                w-auto
-                min-w-full min-h-full
-                max-w-none
-                video-top-layer
-              "
-            ></div>
-            <div class="h-500px xl:h-560px bg-cyan-500">
-              <nuxt-img
-                sizes="xs:100vw"
-                :src="
-                  slide.slider_id.image.s3_url +
-                  slide.slider_id.image.filename_disk
-                "
-              >
-              </nuxt-img>
-            </div>
-            <!-- Hero Text -->
-            <div
-              class="
-                absolute
-                top-1/2
-                left-1/4
-                transform
-                -translate-x-1/4 -translate-y-1/2
-                max-w-screen-md
-                lg:my-auto
-                text-left
-              "
-            >
-              <h1
-                class="
-                  text-3xl
-                  lg:text-6xl
-                  font-bold
-                  mb-3
-                  md:mb-8
-                  bg-neutral
-                  text-transparent
-                  bg-clip-text
-                  uppercase
-                "
-              >
-                {{ slide.slider_id.title }}
-              </h1>
-              <p class="tracking-widest text-neutral opacity-90 md:text-3xl">
-                {{ slide.slider_id.description }}
-              </p>
-
-              <div class="mt-6">
-                <router-link :to="slide.slider_id.link.url">
-                  <button
-                    class="
-                      rounded
-                      text-neutral
-                      font-medium
-                      ring-1 ring-secondary
-                      bg-primary
-                      shadow-2xl
-                      hover:shadow-3xl hover:ring-3
-                      py-3
-                      px-3
-                    "
-                  >
-                    {{ slide.slider_id.link.title }}
-                  </button>
-                </router-link>
-              </div>
-            </div>
-          </CarouselSlide>
-        </carousel>
-      </div>
+          <hero-content :slide="slide"></hero-content>
+        </CarouselSlide>
+      </carousel>
     </header>
     <div
       class="
@@ -134,10 +64,11 @@
 
 <script>
 import FreeConsultation from '../forms/FreeConsultation.vue'
+import HeroContent from './HeroContent.vue'
 // import FadeTransition from '~/components/transitions/FadeTransition.vue'
 
 export default {
-  components: { FreeConsultation },
+  components: { FreeConsultation, HeroContent },
   name: 'Hero',
   // components: {
   // Flicking,
@@ -188,13 +119,6 @@ export default {
 </script>
 
 <style lang="scss">
-.video-top-layer {
-  background-image: linear-gradient(
-    to right,
-    #0074d9,
-    rgba(255, 255, 255, 0) 80%
-  );
-}
 .slide-fade-enter-active {
   transition: all 0.3s ease;
 }
@@ -205,15 +129,5 @@ export default {
 /* .menu-fade-leave-active below version 2.1.8 */ {
   transform: translateX(50px);
   opacity: 0;
-}
-
-.carousel {
-  width: 100%;
-  height: 300px;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
 }
 </style>

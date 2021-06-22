@@ -8,6 +8,15 @@ module.exports = {
     darkMode: 'class',
     plugins: [typography, aspect_ratio],
     theme: {
+        container: {
+            center: true,
+            padding: '1rem',
+            screens: {
+                lg: "1280px",
+                xl: "1280px",
+                "2xl": "1280px"
+            }
+        },
         extend: {
             colors: {
                 primary: "#0074D9",

@@ -5,7 +5,21 @@
     },
     {
         "title": "Business Setup",
-        "slug": "/business-setup"
+        "slug": "/business-setup-uae",
+        "sub": [
+            {
+                "title": "Mainland",
+                "slug": "/services/mainland-companies"
+            },
+            {
+                "title": "Free Zone",
+                "slug": "/services/free-zone-companies"
+            },
+            {
+                "title": "Offshore",
+                "slug": "/services/offshore-companies"
+            }
+        ]
     },
     {
         "title": "Services",
@@ -51,12 +65,18 @@
         "slug": "/about-us"
     },
     {
-        "title": "Blogs",
-        "slug": "/blogs"
-    },
-    {
-        "title": "Careers",
-        "slug": "/careers"
+        "title": "Media",
+        "slug": "#",
+        "sub": [
+            {
+                "title": "Blogs",
+                "slug": "/blogs"
+            },
+            {
+                "title": "Videos",
+                "slug": "/videos"
+            }
+        ]
     },
     {
         "title": "Contact us",

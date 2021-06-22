@@ -1,55 +1,96 @@
 <template>
   <div>
-    <transition name="service-fade">
-      <div
-        v-if="service"
-        class="bg-neutral rounded-md text-primary py-2 w-50 m-auto"
+    <!-- <transition name="service-fade"> -->
+    <div
+      v-motion-roll-bottom
+      v-if="service"
+      class="bg-neutral rounded-md text-primary py-2 w-50 m-auto"
+    >
+      <nav
+        class="
+          flex
+          capitalize
+          flex-col
+          text-md text-center
+          divide-y-1
+          px-3
+          align-middle
+          divide-secondary
+        "
       >
-        <nav
-          class="flex capitalize flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
-        >
-          <!-- <router-link class="icon-btn py-2" to="/services/business-setup">
+        <!-- <router-link class="icon-btn py-2" to="/services/business-setup">
           Business Setup
         </router-link> -->
-          <router-link
-            v-for="(item, i) in mobileServices"
-            class="icon-btn py-2"
-            :to="item.slug"
-            :key="i"
-            >{{ item.title }}
-          </router-link>
-        </nav>
-      </div>
-    </transition>
-    <transition name="menu-fade">
+        <router-link
+          v-for="(item, i) in mobileServices"
+          class="icon-btn py-2"
+          :to="item.slug"
+          :key="i"
+          >{{ item.title }}
+        </router-link>
+      </nav>
+    </div>
+    <!-- </transition> -->
+    <!-- <transition name="menu-fade"> -->
+    <div
+      v-if="menu"
+      v-motion-roll-bottom
+      class="
+        bg-neutral
+        rounded-md
+        text-primary
+        py-2
+        font-bold
+        w-50
+        m-auto
+        shadow-2xl
+      "
+    >
       <div
-        v-if="menu"
-        class="bg-neutral rounded-md text-primary py-2 font-bold w-50 m-auto"
+        class="
+          flex flex-col
+          text-md text-center
+          divide-y-1
+          px-3
+          align-middle
+          divide-secondary
+        "
       >
-        <div
-          class="flex flex-col text-md text-center divide-y-1 px-3 align-middle divide-secondary"
-        >
-          <button class="py-2" @click="$router.replace('/')">Home</button>
-          <button class="py-2" @click="$router.replace('/business-setup')">
-            Business Setup
-          </button>
-          <button class="py-2" @click="setServices">Services</button>
-          <button class="py-2" @click="$router.replace('/about-us')">
-            About us
-          </button>
-          <button class="py-2" @click="$router.replace('/blogs')">Blogs</button>
-          <button class="py-2" @click="$router.replace('/careers')">
-            Careers
-          </button>
-          <button class="py-2" @click="$router.replace('/contact-us')">
-            Contact us
-          </button>
-        </div>
+        <button class="py-2" @click="$router.replace('/')">Home</button>
+        <button class="py-2" @click="$router.replace('/business-setup-uae')">
+          Business Setup
+        </button>
+        <button class="py-2" @click="setServices">Services</button>
+        <button class="py-2" @click="$router.replace('/about-us')">
+          About us
+        </button>
+        <button class="py-2" @click="$router.replace('/blogs')">Blogs</button>
+        <!-- <button class="py-2" @click="$router.replace('/careers')">
+          Careers
+        </button> -->
+        <button class="py-2" @click="$router.replace('/contact-us')">
+          Contact us
+        </button>
       </div>
-    </transition>
+    </div>
+    <!-- </transition> -->
     <button
       @click="onClickMenu"
-      class="z-10 outline-none hover:(ring-10 outline-none) bg-neutral spring ring-5 ring-opacity-30 rounded-full w-10 h-10 md:w-14 md:h-14 m-auto shadow-xl"
+      class="
+        z-10
+        outline-none
+        hover:(ring-10
+        outline-none)
+        bg-neutral
+        spring
+        ring-5 ring-opacity-30
+        rounded-full
+        w-10
+        h-10
+        md:w-14 md:h-14
+        m-auto
+        shadow-xl
+      "
     >
       <span class="text-xs md:text-sm rotate m-auto text-primary">Menu</span>
     </button>

@@ -1,15 +1,36 @@
 <template>
   <div>
     <div
-      class="flex flex-col flex-auto max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto my-12 md:my-30 text-center"
+      class="
+        flex flex-col flex-auto
+        max-w-screen-xl
+        px-6
+        xl:px-0
+        min-h-lg
+        mx-auto
+        my-12
+        md:my-30
+        text-center
+      "
     >
       <!-- Header Section -->
       <div>
         <h1
-          class="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 uppercase bg-primary text-transparent bg-clip-text"
+          class="
+            text-3xl
+            md:text-5xl
+            lg:text-6xl
+            font-bold
+            mb-3
+            uppercase
+            bg-primary
+            text-transparent
+            bg-clip-text
+          "
         >
           WHY CHOOSE US ?
         </h1>
+
         <!-- <p
         class="tracking-widest text-cool-gray-800 opacity-80 dark:(text-primary opacity-50)"
       >
@@ -29,7 +50,14 @@
                 class="flex flex-col p-6 justify-center items-center"
               >
                 <div
-                  class="md:w-20 md:h-20 xl:w-30 xl:h-30 rounded-full border-8 flex items-center"
+                  class="
+                    md:w-20 md:h-20
+                    xl:w-30 xl:h-30
+                    rounded-full
+                    border-8
+                    flex
+                    items-center
+                  "
                 >
                   <img
                     class="rounded-full"
@@ -49,7 +77,6 @@
   </div>
 </template>
 
-
 <script>
 // const reasons = [
 //   { title: "Accuracy", icon: "carbon-center-circle" },
@@ -68,5 +95,4 @@ export default {
   },
 }
 </script>
-<style scoped>
-</style>
+<style scoped></style>

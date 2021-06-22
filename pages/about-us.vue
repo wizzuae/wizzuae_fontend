@@ -2,20 +2,45 @@
   <div>
     <BaseHeader :data="about.data.header" />
     <div
-      class="grid grid-cols-1 gap-6 px-6 xl:px-0 md:py-12 max-w-screen-lg min-h-lg h-full mx-auto"
+      class="
+        grid grid-cols-1
+        gap-6
+        px-6
+        xl:px-0
+        md:py-12
+        max-w-screen-lg
+        min-h-lg
+        h-full
+        mx-auto
+      "
     >
       <base-content :data="about.data.content"></base-content>
     </div>
     <div class="bg-primary py-30">
       <div
-        class="grid gap-6 grid-cols-1 md:grid-cols-2 px-6 xl:px-0 max-w-screen-lg min-h-lg h-full mx-auto"
+        class="
+          grid
+          gap-6
+          grid-cols-1
+          md:grid-cols-2
+          px-6
+          xl:px-0
+          max-w-screen-lg
+          min-h-lg
+          h-full
+          mx-auto
+        "
       >
-        <div
-          class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-purple-50"
-        >
+        <div class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-neutral">
           <header class="mb-3 md:mb-6">
             <h1
-              class="text-primary text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold"
+              class="
+                text-primary text-3xl
+                sm:text-3xl
+                md:text-4xl
+                lg:text-6xl
+                font-semibold
+              "
             >
               Our Mission
             </h1>
@@ -24,12 +49,16 @@
             <base-content :data="about.data.mission"></base-content>
           </div>
         </div>
-        <div
-          class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-purple-50"
-        >
+        <div class="hover:ring-6 shadow-2xl p-8 md:p-12 rounded-2xl bg-neutral">
           <header class="mb-3 md:mb-6">
             <h1
-              class="text-primary text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold"
+              class="
+                text-primary text-3xl
+                sm:text-3xl
+                md:text-4xl
+                lg:text-6xl
+                font-semibold
+              "
             >
               Our Vision
             </h1>
@@ -54,7 +83,16 @@
 
       <div class="mask-layer lg:py-30 py-18">
         <div
-          class="flex flex-col px-6 xl:px-0 text-left w-full text-neutral max-w-screen-lg md:mx-auto"
+          class="
+            flex flex-col
+            px-6
+            xl:px-0
+            text-left
+            w-full
+            text-neutral
+            max-w-screen-lg
+            md:mx-auto
+          "
         >
           <div class="my-auto">
             <h1
@@ -73,7 +111,20 @@
         </div>
 
         <div
-          class="grid grid-cols-2 md:grid-cols-4 justify-center items-center min-h-screen text-center py-12 gap-6 px-6 xl:px-0 max-w-screen-lg mx-auto"
+          class="
+            grid grid-cols-2
+            md:grid-cols-4
+            justify-center
+            items-center
+            min-h-screen
+            text-center
+            py-12
+            gap-6
+            px-6
+            xl:px-0
+            max-w-screen-lg
+            mx-auto
+          "
         >
           <div
             class="shadow-md"

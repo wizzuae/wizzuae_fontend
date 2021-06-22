@@ -1,10 +1,32 @@
 <template>
   <div
-    class="flex text-center max-w-screen-xl px-6 xl:px-0 min-h-lg mx-auto flex-col items-center px-6 py-12 md:py-30"
+    class="
+      flex
+      text-center
+      max-w-screen-xl
+      px-6
+      xl:px-0
+      min-h-lg
+      mx-auto
+      flex-col
+      items-center
+      px-6
+      py-12
+      md:py-30
+    "
   >
     <div v-for="(items, i) in data" :key="i">
       <h1
-        class="text-2xl md:text-5xl lg:text-6xl uppercase bg-primary text-transparent bg-clip-text font-bold"
+        class="
+          text-2xl
+          md:text-5xl
+          lg:text-6xl
+          uppercase
+          bg-primary
+          text-transparent
+          bg-clip-text
+          font-bold
+        "
       >
         WE WORK CLOSELY WITH ALL GOVERNMENT AGENCIES
       </h1>
@@ -14,7 +36,7 @@
         class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4"
       >
         <div
-          class="shadow-lg hover:shadow-2xl"
+          class="shadow-lg"
           v-for="({ brands_id }, i) in items.item.brands"
           :key="i"
         >
@@ -38,5 +60,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

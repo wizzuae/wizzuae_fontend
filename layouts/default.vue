@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="scroll-snap">
     <div class="relative">
       <CoreHeader />
-      <div>
-        <Nuxt />
-      </div>
+    </div>
+    <div>
+      <Nuxt />
       <NavbarMobile class="fixed w-full text-center z-50 bottom-6" />
     </div>
     <CoreFooter />
@@ -21,6 +21,37 @@ export default {
 <style>
 html {
   /* scroll-snap-type: y proximity; */
+}
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary shadow-2xl rounded-full;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.primary');
+}
+.scroll-snap {
   scroll-behavior: smooth;
+  /* scroll-snap-type: y proximity;
+  overflow-y: auto;
+  height: 100vh; */
+}
+.snap-start {
+  scroll-snap-align: start;
+}
+.snap-center {
+  scroll-snap-align: center;
+  /* height: 100vh; */
+}
+.snap-end {
+  scroll-snap-align: end;
+  /* height: 100vh; */
 }
 </style>
