@@ -1,0 +1,35 @@
+[
+    {
+        "title": "YOUR BUSINESS BEGINS HERE",
+        "description": "Leading company formation, business setup, licensing, visa processing, and PRO service provider in the UAE.",
+        "backgroundImage": "/hero/slider-1.jpg",
+        "backgroundImageMobile": "/hero/slider-1-mobile.jpg",
+        "button": {
+            "title": "Get a Free Contestant",
+            "url": "#"
+        },
+        "textColor": "#0074D9"
+    },
+    {
+        "title": "360° BUSINESS SETUP SOLUTIONS",
+        "description": "WIZZ provides the most suitable trade license and corporate structure for businesses in the UAE",
+        "backgroundImage": "/hero/slider-2.jpg",
+        "backgroundImageMobile": "/hero/slider-2-mobile.jpg",
+        "button": {
+            "title": "Learn More",
+            "url": "#"
+        },
+        "textColor": "#fafafa"
+    },
+    {
+        "title": "BEST PACKAGES",
+        "description": "WIZZ offers the most suitable packages for your start-up business to flourish and grow in the UAE",
+        "backgroundImage": "/hero/slider-3.jpg",
+        "backgroundImageMobile": "/hero/slider-3-mobile.jpg",
+        "button": {
+            "title": "Learn more",
+            "url": "#"
+        },
+        "textColor": "#0074D9"
+    }
+]

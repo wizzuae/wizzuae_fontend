@@ -32,7 +32,7 @@ module.exports = {
                 // primary: 'linear-gradient(to right, rgba(30, 58, 138, 1), rgba(8, 145, 178, 0.75) 70%, rgba(30, 58, 138, 1) )',
                 // primary: 'linear-gradient(to right, #1e3a8a, #0891B2 70%, #1e3a8a )',
             },
-        }
+        },
     },
     extract: {
         include: [

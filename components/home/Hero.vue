@@ -11,7 +11,7 @@
         :center-mode="true"
       >
         <CarouselSlide
-          class="h-500px md:h-541px bg-cyan-500"
+          class="h-600px md:h-541px"
           v-for="(slide, i) in data"
           :key="i"
         >

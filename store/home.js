@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import heroData from "./home-content/hero.json"
 
 export const useHomeStore = defineStore({
     id: 'home',
@@ -6,15 +7,7 @@ export const useHomeStore = defineStore({
     state() {
         return {
             // all these properties will have their type inferred automatically
-            hero: [{
-                title: "",
-                description: "",
-                backgroundImage: "",
-                button: {
-                    title: "",
-                    url: ""
-                }
-            },],
+            hero: heroData, //Array
             components: {}
         }
     },

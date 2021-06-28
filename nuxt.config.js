@@ -116,6 +116,10 @@ export default {
     '@nuxt/image',
   ],
 
+  image: {
+    domains: ['https://wizzuae.s3.us-west-000.backblazeb2.com'] //whitelist 
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa

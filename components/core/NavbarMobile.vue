@@ -133,7 +133,7 @@ const mobileServices = [
   },
   {
     title: 'Business Protection & Trademark Registration Services',
-    slug: '/services/business-protection-and-trademark-registration',
+    slug: '/services/trademark-registration-services-uae',
   },
 ]
 export default {

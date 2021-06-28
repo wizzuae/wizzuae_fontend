@@ -20,6 +20,9 @@
           <ul class="capitalize grid lg:grid-cols-1 gap-4">
             <!-- https://github.com/jambonn/vue-concise-carousel#compiles-and-hot-reloads-for-development -->
             <carousel
+              loop
+              autoplay
+              :autoplayTimeout="2000"
               paginationPosition="bottom"
               paginationActiveColor="#0074D9"
               :resistanceCoef="0"
@@ -36,13 +39,13 @@
               <CarouselSlide
                 class="py-3 pr-3"
                 v-for="({ cards_id }, index) in items.item.cards"
-                :key="i"
+                :key="index"
               >
                 <!-- v-motion
                   :initial="{ opacity: 0, y: 100 }"
                   :visible="{ opacity: 1, y: 0 }"
                   :delay="index * 200" -->
-                <li :key="index">
+                <li>
                   <NuxtLink
                     :to="cards_id.button.url"
                     class="

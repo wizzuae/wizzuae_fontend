@@ -1621,6 +1621,14 @@
     "@vueuse/shared" "4.11.2"
     vue-demi "*"
 
+"@vueuse/core@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-5.0.3.tgz#8f3170e2a51ae62fb1725c84d4cc02a7552aad0b"
+  integrity sha512-TMCL11EVMaj2Y5qdYosvuwA+i1aKrerFXs7fhNZiQiLCWxF8XsrNdxzoiaI2n12UcmSOXvd1xdyWs7Nss+p/Hg==
+  dependencies:
+    "@vueuse/shared" "5.0.3"
+    vue-demi "*"
+
 "@vueuse/motion@^1.5.5":
   version "1.5.6"
   resolved "https://registry.yarnpkg.com/@vueuse/motion/-/motion-1.5.6.tgz#b100eba60af7add3cd5ba01a05e676871f33f5ac"
@@ -1634,6 +1642,13 @@
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-4.11.2.tgz#1d56e08937600e3e65abf76f27cb4a1bc182adfd"
   integrity sha512-vTbTi6ou7ljH3CkKVoaIaCAoWB5T1ewSogpL6VnO1duMPNuiv7x8K/LunMbnTg4tVyt6QwaiCuEq/kyS6AUBRg==
+  dependencies:
+    vue-demi "*"
+
+"@vueuse/shared@5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-5.0.3.tgz#31613951d5036459650ad8d47a9185e8950ea3c9"
+  integrity sha512-aY93WPygr8H/4RB8YuOmAD83Y+faq7zwW10Kd9i0kD9zf5ysVP+32j09rF/mZVtGCa0CSM8ambPZMsEhCkRbwQ==
   dependencies:
     vue-demi "*"
 
@@ -4240,6 +4255,11 @@ extract-css-chunks-webpack-plugin@^4.9.0:
     normalize-url "1.9.1"
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
+
+fast-average-color@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/fast-average-color/-/fast-average-color-6.4.0.tgz#c8063e734bc1d98ca66af77765ce669b0cea2417"
+  integrity sha512-K02qOR6MSJIGrGm3p/yPvUnxztL2wDhBHy1wz0ad9X00YQJNPC3jh9ntuj5FnekuYDr8yTjl2CsAiALwZ1QA/w==
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"

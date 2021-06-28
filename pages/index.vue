@@ -46,7 +46,7 @@ export default {
     const global = useGlobalStore(pinia)
     const home = useHomeStore(pinia)
     // Pinia Actions
-    home.setHomeHeroState(hero)
+    // home.setHomeHeroState(hero)
     global.setMetadata(metadata)
     home.setComponents(components)
 
