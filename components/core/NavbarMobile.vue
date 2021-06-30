@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div
+    ref="target"
+    class="fixed transform left-1/2 text-center -translate-x-1/2 z-50 bottom-6"
+  >
     <div
-      ref="target"
       v-if="isMobileNavOpen"
       v-motion-roll-bottom
       class="
@@ -21,8 +23,9 @@
     >
       <mobile-nav :navigation="navigation"></mobile-nav>
     </div>
+
     <button
-      @click="toggleMobileNav"
+      @click="nav.toggleMobileNav"
       class="
         z-10
         outline-none
@@ -79,22 +82,22 @@ import { onClickOutside } from '@vueuse/core'
 export default defineComponent({
   setup() {
     const target = ref(null)
+    // Pinia Store
     const nav = useNavigationStore()
-    onClickOutside(target, () => nav.offMobileNav())
+    const { navigation, offMobileNav } = nav
+    // State
+    const isMobileNavOpen = computed(() => nav.isMobileNavOpen)
+    // const navigation = nav.navigation
 
-    return { target }
+    onClickOutside(target, () => (nav.isMobileNavOpen ? offMobileNav() : ''))
+
+    return { target, isMobileNavOpen, navigation, nav }
   },
   components: { MobileNav },
-  computed: {
-    ...mapState(useNavigationStore, ['isMobileNavOpen', 'navigation']),
-  },
-  methods: {
-    ...mapActions(useNavigationStore, ['toggleMobileNav', 'offMobileNav']),
-  },
   watch: {
     // Detect router change
     $route() {
-      this.offMobileNav()
+      this.nav.offMobileNav()
     },
   },
 })

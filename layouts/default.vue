@@ -5,7 +5,7 @@
     </div>
     <div>
       <Nuxt />
-      <NavbarMobile class="fixed w-full text-center z-50 bottom-6" />
+      <NavbarMobile />
     </div>
     <CoreFooter />
   </div>
