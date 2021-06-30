@@ -114,6 +114,7 @@ export default {
     'pinia/nuxt',
     ['pinia/nuxt', { disableVuex: true }],
     '@nuxt/image',
+    'nuxt-use-motion',
   ],
 
   image: {
@@ -123,8 +124,24 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/robots', '@nuxtjs/axios', '@nuxtjs/sitemap', 'nuxt-use-motion', //'nuxt-facebook-pixel-module',
+    '@nuxtjs/pwa', '@nuxtjs/markdownit', '@nuxtjs/robots', '@nuxtjs/axios', '@nuxtjs/sitemap',  //'nuxt-facebook-pixel-module',
   ],
+  motions: {
+    directives: {
+      'pop-bottom': {
+        initial: {
+          scale: 0,
+          opacity: 0,
+          y: 100
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          y: 0
+        },
+      }
+    }
+  },
   sitemap: {
     hostname: 'https://www.wizzuae.ae',
   },
@@ -168,6 +185,7 @@ export default {
   build: {
   },
   generate: {
-    fallback: true
+    fallback: true,
+    interval: 2000,
   }
 }

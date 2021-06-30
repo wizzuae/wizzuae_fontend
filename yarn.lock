@@ -1613,20 +1613,29 @@
   dependencies:
     tslib "^2.2.0"
 
+"@vueuse/components@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@vueuse/components/-/components-5.0.3.tgz#9ecc0f2b300a6ffeef612acf8e8bacb482f990b3"
+  integrity sha512-EINM/gmkdEeP/J02pbn97ugBJLkTjZ5jmLHmhSDxQVVw0bmnJFrwTNuBebdcdTj+ZVtNO+jxWVgykoTkp+SCVg==
+  dependencies:
+    "@vueuse/core" "5.0.3"
+    "@vueuse/shared" "5.0.3"
+    vue-demi "*"
+
+"@vueuse/core@5.0.3", "@vueuse/core@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-5.0.3.tgz#8f3170e2a51ae62fb1725c84d4cc02a7552aad0b"
+  integrity sha512-TMCL11EVMaj2Y5qdYosvuwA+i1aKrerFXs7fhNZiQiLCWxF8XsrNdxzoiaI2n12UcmSOXvd1xdyWs7Nss+p/Hg==
+  dependencies:
+    "@vueuse/shared" "5.0.3"
+    vue-demi "*"
+
 "@vueuse/core@^4.11.0":
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-4.11.2.tgz#d4f54bd38e7c289c6f6357992c02423774cb26d9"
   integrity sha512-4A17XvKXpMR6829EVWvrdSKEeAjTWaiC3+xh51KEtlyCwvWQwZ0xwKDrbMj+e15ANxjHrTw/0bJVaWDfPQt/Pw==
   dependencies:
     "@vueuse/shared" "4.11.2"
-    vue-demi "*"
-
-"@vueuse/core@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-5.0.3.tgz#8f3170e2a51ae62fb1725c84d4cc02a7552aad0b"
-  integrity sha512-TMCL11EVMaj2Y5qdYosvuwA+i1aKrerFXs7fhNZiQiLCWxF8XsrNdxzoiaI2n12UcmSOXvd1xdyWs7Nss+p/Hg==
-  dependencies:
-    "@vueuse/shared" "5.0.3"
     vue-demi "*"
 
 "@vueuse/motion@^1.5.5":

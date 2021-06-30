@@ -6,7 +6,7 @@
     <why-choose-us :data="home.components.whyChooseUs" class="" />
     <how-to-get-started :data="home.components.howToGetStarted" class="" />
     <Government :data="home.components.governmentAgencies" class="" />
-    <join-our-team :data="home.components.joinOurTeam" class=""></join-our-team>
+    <!-- <join-our-team :data="home.components.joinOurTeam" class=""></join-our-team> -->
   </div>
 </template>
 
@@ -16,10 +16,10 @@ import Government from '~/components/home/Government.vue'
 import QuickGuide from '~/components/home/QuickGuide.vue'
 import WhyChooseUs from '~/components/home/WhyChooseUs.vue'
 import HowToGetStarted from '~/components/home/HowToGetStarted.vue'
-import JoinOurTeam from '~/components/home/JoinOurTeam.vue'
+// import JoinOurTeam from '~/components/home/JoinOurTeam.vue'
 import { useGlobalStore, useHomeStore } from '~/store'
 import fields from '~/api/home'
-import QuickGuideV2 from '~/components/home/v2/QuickGuideV2.vue'
+// import QuickGuideV2 from '~/components/home/v2/QuickGuideV2.vue'
 export default {
   components: {
     Hero,
@@ -27,8 +27,8 @@ export default {
     QuickGuide,
     WhyChooseUs,
     HowToGetStarted,
-    JoinOurTeam,
-    QuickGuideV2,
+    // JoinOurTeam,
+    // QuickGuideV2,
   },
   name: 'home',
   async asyncData({ $axios, pinia }) {

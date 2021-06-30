@@ -1,81 +1,28 @@
 <template>
   <div>
-    <!-- <transition name="service-fade"> -->
     <div
-      v-motion-roll-bottom
-      v-if="service"
-      class="bg-neutral rounded-md text-primary py-2 w-50 m-auto"
-    >
-      <nav
-        class="
-          flex
-          capitalize
-          flex-col
-          text-md text-center
-          divide-y-1
-          px-3
-          align-middle
-          divide-secondary
-        "
-      >
-        <!-- <router-link class="icon-btn py-2" to="/services/business-setup">
-          Business Setup
-        </router-link> -->
-        <router-link
-          v-for="(item, i) in mobileServices"
-          class="icon-btn py-2"
-          :to="item.slug"
-          :key="i"
-          >{{ item.title }}
-        </router-link>
-      </nav>
-    </div>
-    <!-- </transition> -->
-    <!-- <transition name="menu-fade"> -->
-    <div
-      v-if="menu"
+      ref="target"
+      v-if="isMobileNavOpen"
       v-motion-roll-bottom
       class="
         bg-neutral
         rounded-md
         text-primary
         py-2
-        font-bold
-        w-50
+        font-normal
+        w-72
+        max-h-100
+        overflow-x-auto
+        bg-scroll
         m-auto
         shadow-2xl
+        text-left
       "
     >
-      <div
-        class="
-          flex flex-col
-          text-md text-center
-          divide-y-1
-          px-3
-          align-middle
-          divide-secondary
-        "
-      >
-        <button class="py-2" @click="$router.replace('/')">Home</button>
-        <button class="py-2" @click="$router.replace('/business-setup-uae')">
-          Business Setup
-        </button>
-        <button class="py-2" @click="setServices">Services</button>
-        <button class="py-2" @click="$router.replace('/about-us')">
-          About us
-        </button>
-        <button class="py-2" @click="$router.replace('/blogs')">Blogs</button>
-        <!-- <button class="py-2" @click="$router.replace('/careers')">
-          Careers
-        </button> -->
-        <button class="py-2" @click="$router.replace('/contact-us')">
-          Contact us
-        </button>
-      </div>
+      <mobile-nav :navigation="navigation"></mobile-nav>
     </div>
-    <!-- </transition> -->
     <button
-      @click="onClickMenu"
+      @click="toggleMobileNav"
       class="
         z-10
         outline-none
@@ -92,72 +39,83 @@
         shadow-xl
       "
     >
-      <span class="text-xs md:text-sm rotate m-auto text-primary">Menu</span>
+      <span
+        v-if="isMobileNavOpen"
+        class="text-xs md:text-sm m-auto text-primary"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          aria-hidden="true"
+          role="img"
+          class="iconify iconify--mdi mx-auto"
+          width="22"
+          height="22"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M13.46 12L19 17.54V19h-1.46L12 13.46L6.46 19H5v-1.46L10.54 12L5 6.46V5h1.46L12 10.54L17.54 5H19v1.46L13.46 12z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </span>
+
+      <span
+        v-if="!isMobileNavOpen"
+        class="text-xs md:text-sm m-auto text-primary"
+        >Menu</span
+      >
     </button>
   </div>
 </template>
 
 <script>
-const mobileServices = [
-  {
-    title: 'PRO & VISA Services',
-    slug: '/services/pro-and-visa-services-uae',
+import { computed, defineComponent, ref } from '@nuxtjs/composition-api'
+import MobileNav from './mobile-navigation/MobileNav.vue'
+import { mapState, mapActions } from 'pinia'
+import { useNavigationStore } from '~/store'
+import { onClickOutside } from '@vueuse/core'
+export default defineComponent({
+  setup() {
+    const target = ref(null)
+    const nav = useNavigationStore()
+    onClickOutside(target, () => nav.offMobileNav())
+
+    return { target }
   },
-  {
-    title: 'Local Sponsors',
-    slug: '/services/local-sponsors-uae',
-  },
-  {
-    title: 'Bank Account Opening',
-    slug: '/services/bank-account-opening-uae',
-  },
-  {
-    title: 'Trademark Services',
-    slug: '/services/trademark-registration-services-uae',
-  },
-  {
-    title: 'Financial Services',
-    slug: '/services/financial-services',
-  },
-  {
-    title: 'Notarization',
-    slug: '/services/notarization',
-  },
-  {
-    title: 'Investor Right Protection',
-    slug: '/services/investor-rights-and-protection',
-  },
-  {
-    title: 'Certificate Attestation Embassy Services',
-    slug: '/services/certificate-attestation-embassy-services',
-  },
-  {
-    title: 'Business Protection & Trademark Registration Services',
-    slug: '/services/trademark-registration-services-uae',
-  },
-]
-export default {
-  data() {
-    return {
-      menu: false,
-      service: false,
-      mobileServices: mobileServices,
-    }
+  components: { MobileNav },
+  computed: {
+    ...mapState(useNavigationStore, ['isMobileNavOpen', 'navigation']),
   },
   methods: {
-    onClickMenu() {
-      this.service = false
-      this.menu = !this.menu
-    },
-    setServices() {
-      this.menu = false
-      this.service = true
+    ...mapActions(useNavigationStore, ['toggleMobileNav', 'offMobileNav']),
+  },
+  watch: {
+    // Detect router change
+    $route() {
+      this.offMobileNav()
     },
   },
-}
+})
 </script>
 
 <style scoped>
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary shadow-2xl rounded-full;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.primary');
+}
 :focus {
   outline: none;
   @apply shadow-inner;
