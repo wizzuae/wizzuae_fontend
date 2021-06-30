@@ -74,13 +74,19 @@
 </template>
 
 <script>
-import { computed, defineComponent, ref } from '@nuxtjs/composition-api'
+import {
+  watch,
+  computed,
+  defineComponent,
+  ref,
+  useRoute,
+} from '@nuxtjs/composition-api'
 import MobileNav from './mobile-navigation/MobileNav.vue'
-import { mapState, mapActions } from 'pinia'
 import { useNavigationStore } from '~/store'
 import { onClickOutside } from '@vueuse/core'
 export default defineComponent({
   setup() {
+    const route = useRoute()
     const target = ref(null)
     // Pinia Store
     const nav = useNavigationStore()
@@ -90,16 +96,13 @@ export default defineComponent({
     // const navigation = nav.navigation
 
     onClickOutside(target, () => (nav.isMobileNavOpen ? offMobileNav() : ''))
+    watch(route, () => {
+      offMobileNav()
+    })
 
     return { target, isMobileNavOpen, navigation, nav }
   },
   components: { MobileNav },
-  watch: {
-    // Detect router change
-    $route() {
-      this.nav.offMobileNav()
-    },
-  },
 })
 </script>
 
