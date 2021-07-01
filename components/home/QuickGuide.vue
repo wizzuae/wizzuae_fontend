@@ -106,9 +106,7 @@
 </template>
 
 <script>
-import GivingHand from './GivingHand.vue'
 export default {
-  components: { GivingHand },
   props: {
     data: {
       type: Array,

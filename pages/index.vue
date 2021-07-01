@@ -1,6 +1,7 @@
 <template>
   <div>
     <Hero v-if="home.hero" :data="home.hero" class="" />
+    <BusinessSetup></BusinessSetup>
     <!-- <QuickGuideV2 /> -->
     <quick-guide :data="home.components.quickGuide" class="" />
     <why-choose-us :data="home.components.whyChooseUs" class="" />
@@ -19,6 +20,7 @@ import HowToGetStarted from '~/components/home/HowToGetStarted.vue'
 // import JoinOurTeam from '~/components/home/JoinOurTeam.vue'
 import { useGlobalStore, useHomeStore } from '~/store'
 import fields from '~/api/home'
+import BusinessSetup from '~/components/home/BusinessSetup.vue'
 // import QuickGuideV2 from '~/components/home/v2/QuickGuideV2.vue'
 export default {
   components: {
@@ -27,6 +29,7 @@ export default {
     QuickGuide,
     WhyChooseUs,
     HowToGetStarted,
+    BusinessSetup,
     // JoinOurTeam,
     // QuickGuideV2,
   },
