@@ -8,7 +8,33 @@ export const useHomeStore = defineStore({
         return {
             // all these properties will have their type inferred automatically
             hero: heroData, //Array
-            components: {}
+            components: {},
+            whyChooseUs: {
+                title: "Why Choose us",
+                description: "",
+                reasons: [
+                    {
+                        title: "Industry Experience",
+                        description: "Our experts have more than a decade of industry experience in business setup and company formation",
+                        icon: '/why-choose-us/IndustryExperience.svg'
+                    },
+                    {
+                        title: "Transparent Quotes",
+                        description: "Wizz is highly transparent and we do not “mask” our prices or charge additional fee after sending our quotation.",
+                        icon: '/why-choose-us/Transparent.svg'
+                    },
+                    {
+                        title: "Customer Satisfaction",
+                        description: "You are our priority. WIZZ provides seamless services keeping the client's interest first.",
+                        icon: '/why-choose-us/Smiley.svg'
+                    },
+                    {
+                        title: "360 Degree Plans",
+                        description: "Wizz provides 360 degree plans  for your business from  licensing, visa processing, PRO to opening a corporate bank account, business protection and trademark registration services.",
+                        icon: '/why-choose-us/360Outline.svg'
+                    },
+                ]
+            }
         }
     },
     actions: {

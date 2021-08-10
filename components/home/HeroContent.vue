@@ -64,28 +64,32 @@
 </template>
 
 <script>
+import { defineComponent, computed, useContext } from '@nuxtjs/composition-api'
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
-export default {
+export default defineComponent({
   props: {
     slide: Object,
   },
-  computed: {
-    backgroundStyles() {
+  setup(props) {
+    const { $img } = useContext()
+
+    const backgroundStyles = computed(() => {
       const breakpoints = useBreakpoints(breakpointsTailwind)
       const smAndLarger = breakpoints.greater('sm')
-      const imgUrl = this.$img(
+      const imgUrl = $img(
         smAndLarger.value
-          ? this.slide.backgroundImage
-          : this.slide.backgroundImageMobile,
+          ? props.slide.backgroundImage
+          : props.slide.backgroundImageMobile,
         { width: '100vw' }
       )
       return {
         backgroundImage: `url('${imgUrl}')`,
-        color: this.slide.textColor,
+        color: props.slide.textColor,
       }
-    },
+    })
+    return { backgroundStyles }
   },
-}
+})
 </script>
 
 <style lang="scss" scoped>
