@@ -90,7 +90,7 @@ export const useNavigationStore = defineStore({
                         },
                         {
                             title: "Videos",
-                            slug: "/videos",
+                            slug: "#",
                         }
                     ]
                 },
