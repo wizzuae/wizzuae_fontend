@@ -132,6 +132,7 @@
             :key="i"
           >
             <img
+              v-if="logo"
               class="rounded-xl"
               :src="logo.s3_url + logo.filename_disk"
               alt="logo"

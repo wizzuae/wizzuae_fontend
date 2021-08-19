@@ -107,11 +107,10 @@ export default {
   buildModules: [
 
     // https://go.nuxtjs.dev/tailwindcss
-    'nuxt-vite',
+    // 'nuxt-vite',
     'nuxt-windicss',
     // https://composition-api.nuxtjs.org/getting-started/setup#quick-start
     '@nuxtjs/composition-api/module',
-    'pinia/nuxt',
     ['pinia/nuxt', { disableVuex: true }],
     '@nuxt/image',
     'nuxt-use-motion',

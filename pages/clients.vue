@@ -2,14 +2,27 @@
   <div class="min-h-screen">
     <BaseHeader :data="data.header" />
     <div
-      class="grid grid-cols-2 md:grid-cols-4 justify-center items-center min-h-screen text-center py-12 gap-6 px-6 xl:px-0 max-w-screen-lg mx-auto"
+      class="
+        grid grid-cols-2
+        md:grid-cols-4
+        justify-center
+        items-center
+        min-h-screen
+        text-center
+        py-12
+        gap-6
+        px-6
+        xl:px-0
+        max-w-screen-lg
+        mx-auto
+      "
     >
       <div
         class="shadow-md"
         v-for="({ brands_id: { logo } }, i) in data.clients.brands"
         :key="i"
       >
-        <img :src="logo.s3_url + logo.filename_disk" alt="logo" />
+        <img v-if="logo" :src="logo.s3_url + logo.filename_disk" alt="logo" />
       </div>
     </div>
     <!-- <div
@@ -47,5 +60,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
