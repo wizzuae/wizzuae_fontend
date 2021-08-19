@@ -15,7 +15,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@vueuse/core": "^5.0.3",
+    "@vueuse/core": "^6.0.0",
     "core-js": "^3.14.0",
     "fast-average-color": "^6.4.0",
     "nuxt": "^2.15.7",
@@ -24,7 +24,7 @@
     "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.4.14",
+    "@nuxt/image": "^0.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "fibers": "^5.0.0",
